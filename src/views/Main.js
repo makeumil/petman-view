@@ -10,52 +10,52 @@ const Main = (props) => {
 			<div class={styles.header}>
 				<div class={styles.header__wrapper}>
 					<div class={styles.header__start}>         
-						<a href='/'>
+						<Link to='/'>
 							<img class={styles.header__search} src='/images/search2.png' alt=''></img>  
-						</a>	
+						</Link>	
 						<span class={styles.header__area}>인천시 > 계양구</span>						
 					</div>
 					<div class={styles.header__end}> 
-						<a href='/'>
+						<Link to='/'>
 							<img class={styles.header__search} src='/images/menu.png' alt=''></img>
 							<img class={styles.header__alarm} src='/images/alarm2.png' alt=''></img>
-						</a>
+						</Link>
 					</div>
 				</div>	
 			</div>
 
 			<nav class={styles.nav}>
 				<ul class={styles.nav__wrapper}> 
-					<a href='/'>     
+					<Link to='/'>     
 						<li> 
 							<img class={styles.nav__icon} src='/images/home2.png' alt=''/>   
 							<span class={styles.nav__menu}>홈</span>
 						</li>
-					</a>		
-					<a href='/'>     
+					</Link>		
+					<Link to='/'>     
 						<li> 
 							<img class={styles.nav__icon} src='/images/vlog2.png'  alt=''/>   
 							<span class={styles.nav__menu}>펫매니저</span>
 						</li>
-					</a>	
-					<a href='/'>    
+					\</Link>		
+					<Link to='/'>    
 						<li> 
 							<img class={styles.nav__icon} src='/images/parcel2.png'  alt=''/>
 							<span class={styles.nav__menu}>분양정보</span>  
 						</li>
-					</a>	
-					<a href='/'>        
+					</Link>		
+					<Link to='/'>        
 						<li> 
 							<img class={styles.nav__icon} src='/images/position2.png'  alt=''/>
 							<span class={styles.nav__menu}>지역정보</span>
 						</li>
-					</a>
-					<a href='/'>    
+					</Link>	
+					<Link to='/'>    
 						<li>
 							<img class={styles.nav__icon} src='/images/user2.png'  alt=''/>    
 							<span class={styles.nav__menu}>내정보</span>
 						</li>
-					</a>	
+					</Link>		
 				</ul>			
 			</nav> 
 
@@ -63,9 +63,9 @@ const Main = (props) => {
 				<div class={styles.thumbs__wrapper}> 
 					<div class={styles.thumbs__item}> 
 						<div class={styles.thumbs__thumbnail}>
-							<a href='/detail'> 
+							<Link to='/content'> 
 								<img class={styles.thumbs__thumbnail__img} src='/upload/puppy1.jpg'  alt=''/>
-							</a>
+							</Link>
 						</div>		
 							
 						<div class={styles.thumbs__info}>        
@@ -91,9 +91,9 @@ const Main = (props) => {
 		
 					<div class={styles.thumbs__item}> 
 						<div class={styles.thumbs__thumbnail}>
-							<a href='/detail'> 
+							<Link to='/content'> 
 								<img class={styles.thumbs__thumbnail__img} src='/upload/puppy2.jpg'  alt=''/>
-							</a>	
+							</Link>	
 						</div>		
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
@@ -116,9 +116,9 @@ const Main = (props) => {
 				
 					<div class={styles.thumbs__item}> 
 						<div class={styles.thumbs__thumbnail}>
-							<a href='/detail'> 
+							<Link to='/content'> 
 								<img class={styles.thumbs__thumbnail__img} src='/upload/puppy3.jpg'  alt=''/>
-							</a>	
+							</Link>	
 						</div>	
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
@@ -141,9 +141,9 @@ const Main = (props) => {
 				
 					<div class={styles.thumbs__item}> 
 						<div class={styles.thumbs__thumbnail}>
-							<a href='/detail'> 
+							<Link to='/detail'> 
 								<img class={styles.thumbs__thumbnail__img} src='/upload/puppy4.jpg'  alt=''/>
-							</a>	
+							</Link> 	
 						</div>	
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
@@ -166,9 +166,9 @@ const Main = (props) => {
 									
 					<div class={styles.thumbs__item}> 
 						<div class={styles.thumbs__thumbnail}>
-							<a href='/detail'> 
+							<Link to='/detail'> 
 								<img class={styles.thumbs__thumbnail__img} src='/upload/puppy5.jpg'  alt=''/>
-							</a>	
+							</Link> 	
 						</div>	
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
@@ -191,9 +191,9 @@ const Main = (props) => {
 									
 					<div class={styles.thumbs__item}> 
 						<div class={styles.thumbs__thumbnail}>
-							<a href='/detail'> 
+							<Link to='/detail'> 
 								<img class={styles.thumbs__thumbnail__img} src='/upload/puppy6.jpg'  alt=''/>
-							</a>	
+							</Link> 	
 						</div>	
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
@@ -216,9 +216,9 @@ const Main = (props) => {
 									
 					<div class={styles.thumbs__item}> 
 						<div class={styles.thumbs__thumbnail}>
-							<a href='/detail'> 
+							<Link to='/detail'> 
 								<img class={styles.thumbs__thumbnail__img} src='/upload/puppy7.jpg'  alt=''/>
-							</a>	
+							</Link> 	
 						</div>	
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
@@ -241,9 +241,9 @@ const Main = (props) => {
 									
 					<div class={styles.thumbs__item}> 
 						<div class={styles.thumbs__thumbnail}>
-							<a href='/detail'> 
+							<Link to='/detail'> 
 								<img class={styles.thumbs__thumbnail__img} src='/upload/puppy8.jpg'  alt=''/>
-							</a>	
+							</Link> 	
 						</div>	
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
@@ -266,9 +266,9 @@ const Main = (props) => {
 									
 					<div class={styles.thumbs__item}> 
 						<div class={styles.thumbs__thumbnail}>
-							<a href='/detail'> 
+							<Link to='/detail'> 
 								<img class={styles.thumbs__thumbnail__img} src='/upload/puppy9.jpg'  alt=''/>
-							</a>	
+							</Link> 	
 						</div>	
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
@@ -291,9 +291,9 @@ const Main = (props) => {
 									
 					<div class={styles.thumbs__item}> 
 						<div class={styles.thumbs__thumbnail}>
-							<a href='/detail'> 
+							<Link to='/detail'> 
 								<img class={styles.thumbs__thumbnail__img} src='/upload/puppy10.jpg'  alt=''/>
-							</a>	
+							</Link> 	
 						</div>	
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
@@ -316,9 +316,9 @@ const Main = (props) => {
 									
 					<div class={styles.thumbs__item}> 
 						<div class={styles.thumbs__thumbnail}>
-							<a href='/detail'> 
+							<Link to='/detail'> 
 								<img class={styles.thumbs__thumbnail__img} src='/upload/puppy11.jpg'  alt=''/>
-							</a>	
+							</Link> 	
 						</div>	
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
@@ -341,9 +341,9 @@ const Main = (props) => {
 									
 					<div class={styles.thumbs__item}> 
 						<div class={styles.thumbs__thumbnail}>
-							<a href='/detail'> 
+							<Link to='/detail'> 
 								<img class={styles.thumbs__thumbnail__img} src='/upload/puppy12.jpg'  alt=''/>
-							</a>	
+							</Link> 	
 						</div>	
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
@@ -373,34 +373,34 @@ const Main = (props) => {
 			<div class={styles.footer}>
 				<div class={styles.footer__contents}>     
 					<div class={styles.footer__item}>
-						<a href='/'>
+						<Link to='/'>
 						<img class={styles.footer__contents__image} src='/images/home2.png'  alt=''/>  
 						<p>홈</p>
-						</a>
+						</Link> 
 					</div>	
 					<div class={styles.footer__item}>
-						<a href='/'>   
+						<Link to='/'>   
 						<img class={styles.footer__contents__image} src='/images/vlog2.png'  alt=''/>  
 						<p>펫매니저</p>
-						</a>
+						</Link> 
 					</div>
 					<div class={styles.footer__item}>  
-						<a href='/'>
+						<Link to='/'>
 						<img class={styles.footer__contents__image} src='/images/parcel2.png'  alt=''/>
 						<p>분양정보</p>
-						</a>
+						</Link> 
 					</div>	
 					<div class={styles.footer__item}> 
-						<a href='/'>
+						<Link to='/'>
 						<img class={styles.footer__contents__image} src='/images/position2.png'  alt=''/>
 						<p>지역정보</p>
-						</a>
+						</Link> 
 					</div>
 					<div class={styles.footer__item}>
-						<a href='/'>
+						<Link to='/'>
 						<img class={styles.footer__contents__image} src='/images/user2.png'  alt=''/>   
 						<p>사용자</p>
-						</a>
+						</Link> 
 					</div>		
 				</div>	
 			</div>		
@@ -421,12 +421,12 @@ function Floting_Btn() {
 	return (
 		<div class={styles.floating__button}> 
 			<span class={styles.move__board}> 
-				<a href='/'>    
+				<Link to='/'>    
 					<img src='/images/write.png'  alt=''/>  
-				</a>	
+				</Link> 	
 			</span>
 		</div> 
-	)
+	);
 };
 
 export default Main;
