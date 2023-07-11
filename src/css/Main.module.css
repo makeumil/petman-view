@@ -46,7 +46,7 @@
     height: 60px;
     border: none;
     background-color: transparent;
-    margin-left: 6px;
+    margin-left: 30px;
 }
 
 
@@ -87,9 +87,6 @@
 .thumbs__text{
     width: 100%;
     height: calc(100% - 180px);
-}
-.thumbs__text__name{
-    font-size: 1rem;
 }
 .thumbs__text__date{
     font-size:  0.8rem;
@@ -268,9 +265,6 @@
     }
     .thumbs__item{
         width: 100%;
-    }
-    .thumbs__text__name{
-        font-size:  2rem;
     }
     .thumbs__text__date{
         font-size:  1.6rem;

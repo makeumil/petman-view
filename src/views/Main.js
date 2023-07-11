@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import styles from '../css/Main.module.css';
+import '../css/User.css';
 import React, {useState, useEffect} from 'react';
 
 
 
-const Main = (props) => {
+const Main = () => {
 	return (
 		<>
 			<div class={styles.header}>
@@ -13,7 +14,7 @@ const Main = (props) => {
 						<Link to='/'>
 							<img class={styles.header__search} src='/images/search2.png' alt=''></img>  
 						</Link>	
-						<span class={styles.header__area}>인천시 > 계양구</span>						
+						<span class={styles.header__area}>인천시 &gt; 계양구</span>						
 					</div>
 					<div class={styles.header__end}> 
 						<Link to='/'>
@@ -37,7 +38,7 @@ const Main = (props) => {
 							<img class={styles.nav__icon} src='/images/vlog2.png'  alt=''/>   
 							<span class={styles.nav__menu}>펫매니저</span>
 						</li>
-					\</Link>		
+					</Link>		
 					<Link to='/'>    
 						<li> 
 							<img class={styles.nav__icon} src='/images/parcel2.png'  alt=''/>
@@ -71,12 +72,16 @@ const Main = (props) => {
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>  
 								<div class={styles.thumbs__profile__title}>
-									<p class={styles.thumbs__text__name}>꽃님이 / 여 / 7개월</p>
-									<p class={styles.thumbs__text__date}>2023.07.09 12:20</p>
+									<span class='user__name'>꽃님이아빠</span>
+									<span class='user__area'>박촌동</span> 									
 								</div>	
+								<div class={styles.thumbs__profile__title}>
+									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>활짝 웃고있는 꽃님이</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 
 							<div class={styles.thumbs__frends}>  
@@ -98,12 +103,16 @@ const Main = (props) => {
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
 								<div class={styles.thumbs__profile__title}>
-									<p class={styles.thumbs__text__name}>꽃님이 / 여 / 7개월</p>
-									<p class={styles.thumbs__text__date}>2023.07.09 12:20</p>
+									<span class='user__name'>꽃님이아빠</span>
+									<span class='user__area'>박촌동</span> 									
 								</div>	
+								<div class={styles.thumbs__profile__title}>
+									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>활짝 웃고있는 꽃님이</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
 								<img class={styles.thumbs__heart__image} src='/images/heart.png'  alt=''/>
@@ -123,12 +132,16 @@ const Main = (props) => {
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
 								<div class={styles.thumbs__profile__title}>
-									<p class={styles.thumbs__text__name}>꽃님이 / 여 / 7개월</p>
-									<p class={styles.thumbs__text__date}>2023.07.09 12:20</p>
+									<span class='user__name'>꽃님이아빠</span>
+									<span class='user__area'>박촌동</span> 									
 								</div>	
+								<div class={styles.thumbs__profile__title}>
+									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>활짝 웃고있는 꽃님이</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
 								<img class={styles.thumbs__heart__image} src='/images/heart.png'  alt=''/>
@@ -148,12 +161,16 @@ const Main = (props) => {
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
 								<div class={styles.thumbs__profile__title}>
-									<p class={styles.thumbs__text__name}>꽃님이 / 여 / 7개월</p>
-									<p class={styles.thumbs__text__date}>2023.07.09 12:20</p>
+									<span class='user__name'>꽃님이아빠</span>
+									<span class='user__area'>박촌동</span> 									
 								</div>	
+								<div class={styles.thumbs__profile__title}>
+									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>활짝 웃고있는 꽃님이</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
 								<img class={styles.thumbs__heart__image} src='/images/heart.png'  alt=''/>
@@ -173,12 +190,16 @@ const Main = (props) => {
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
 								<div class={styles.thumbs__profile__title}>
-									<p class={styles.thumbs__text__name}>꽃님이 / 여 / 7개월</p>
-									<p class={styles.thumbs__text__date}>2023.07.09 12:20</p>
+									<span class='user__name'>꽃님이아빠</span>
+									<span class='user__area'>박촌동</span> 									
 								</div>	
+								<div class={styles.thumbs__profile__title}>
+									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>활짝 웃고있는 꽃님이</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
 								<img class={styles.thumbs__heart__image} src='/images/heart.png'  alt=''/>
@@ -198,12 +219,16 @@ const Main = (props) => {
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
 								<div class={styles.thumbs__profile__title}>
-									<p class={styles.thumbs__text__name}>꽃님이 / 여 / 7개월</p>
-									<p class={styles.thumbs__text__date}>2023.07.09 12:20</p>
+									<span class='user__name'>꽃님이아빠</span>
+									<span class='user__area'>박촌동</span> 									
 								</div>	
+								<div class={styles.thumbs__profile__title}>
+									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>활짝 웃고있는 꽃님이</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
 								<img class={styles.thumbs__heart__image} src='/images/heart.png'  alt=''/>
@@ -223,12 +248,16 @@ const Main = (props) => {
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
 								<div class={styles.thumbs__profile__title}>
-									<p class={styles.thumbs__text__name}>꽃님이 / 여 / 7개월</p>
-									<p class={styles.thumbs__text__date}>2023.07.09 12:20</p>
+									<span class='user__name'>꽃님이아빠</span>
+									<span class='user__area'>박촌동</span> 									
 								</div>	
+								<div class={styles.thumbs__profile__title}>
+									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>활짝 웃고있는 꽃님이</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
 								<img class={styles.thumbs__heart__image} src='/images/heart.png'  alt=''/>
@@ -248,12 +277,16 @@ const Main = (props) => {
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
 								<div class={styles.thumbs__profile__title}>
-									<p class={styles.thumbs__text__name}>꽃님이 / 여 / 7개월</p>
-									<p class={styles.thumbs__text__date}>2023.07.09 12:20</p>
+									<span class='user__name'>꽃님이아빠</span>
+									<span class='user__area'>박촌동</span> 									
 								</div>	
+								<div class={styles.thumbs__profile__title}>
+									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>활짝 웃고있는 꽃님이</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
 								<img class={styles.thumbs__heart__image} src='/images/heart.png'  alt=''/>
@@ -273,12 +306,16 @@ const Main = (props) => {
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
 								<div class={styles.thumbs__profile__title}>
-									<p class={styles.thumbs__text__name}>꽃님이 / 여 / 7개월</p>
-									<p class={styles.thumbs__text__date}>2023.07.09 12:20</p>
+									<span class='user__name'>꽃님이아빠</span>
+									<span class='user__area'>박촌동</span> 									
+								</div>	
+								<div class={styles.thumbs__profile__title}>
+									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
 								</div>	
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>활짝 웃고있는 꽃님이</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
 								<img class={styles.thumbs__heart__image} src='/images/heart.png'  alt=''/>
@@ -298,12 +335,16 @@ const Main = (props) => {
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
 								<div class={styles.thumbs__profile__title}>
-									<p class={styles.thumbs__text__name}>꽃님이 / 여 / 7개월</p>
-									<p class={styles.thumbs__text__date}>2023.07.09 12:20</p>
+									<span class='user__name'>꽃님이아빠</span>
+									<span class='user__area'>박촌동</span> 									
 								</div>	
+								<div class={styles.thumbs__profile__title}>
+									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>활짝 웃고있는 꽃님이</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
 								<img class={styles.thumbs__heart__image} src='/images/heart.png'  alt=''/>
@@ -323,12 +364,16 @@ const Main = (props) => {
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
 								<div class={styles.thumbs__profile__title}>
-									<p class={styles.thumbs__text__name}>꽃님이 / 여 / 7개월</p>
-									<p class={styles.thumbs__text__date}>2023.07.09 12:20</p>
+									<span class='user__name'>꽃님이아빠</span>
+									<span class='user__area'>박촌동</span> 									
+								</div>	
+								<div class={styles.thumbs__profile__title}>
+									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
 								</div>	
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>활짝 웃고있는 꽃님이</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
 								<img class={styles.thumbs__heart__image} src='/images/heart.png'  alt=''/>
@@ -348,12 +393,16 @@ const Main = (props) => {
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__profile__group}>   
 								<div class={styles.thumbs__profile__title}>
-									<p class={styles.thumbs__text__name}>꽃님이 / 여 / 7개월</p>
-									<p class={styles.thumbs__text__date}>2023.07.09 12:20</p>
+									<span class='user__name'>꽃님이아빠</span>
+									<span class='user__area'>박촌동</span> 									
 								</div>	
+								<div class={styles.thumbs__profile__title}>
+									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>활짝 웃고있는 꽃님이</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
 								<img class={styles.thumbs__heart__image} src='/images/heart.png'  alt=''/>
