@@ -12,14 +12,16 @@ const Main = () => {
 				<div class={styles.header__wrapper}>
 					<div class={styles.header__start}>         
 						<Link to='/'>
-							<img class={styles.header__search} src='/images/search2.png' alt=''></img>  
+							<img class={styles.header__icon} src='/images/search2.png' alt=''></img>  
 						</Link>	
 						<span class={styles.header__area}>인천시 &gt; 계양구</span>						
 					</div>
 					<div class={styles.header__end}> 
 						<Link to='/'>
-							<img class={styles.header__search} src='/images/menu.png' alt=''></img>
-							<img class={styles.header__alarm} src='/images/alarm2.png' alt=''></img>
+							<img class={styles.header__icon} src='/images/menu.png' alt=''></img>
+						</Link>	
+						<Link to='/'>
+							<img class={styles.header__icon} src='/images/alarm2.png' alt=''></img>
 						</Link>
 					</div>
 				</div>	
@@ -429,25 +431,25 @@ const Main = () => {
 					</div>	
 					<div class={styles.footer__item}>
 						<Link to='/'>   
-						<img class={styles.footer__contents__image} src='/images/vlog2.png'  alt=''/>  
+						<img class={styles.footer__icon} src='/images/vlog2.png'  alt=''/>  
 						<p>펫매니저</p>
 						</Link> 
 					</div>
 					<div class={styles.footer__item}>  
 						<Link to='/'>
-						<img class={styles.footer__contents__image} src='/images/parcel2.png'  alt=''/>
+						<img class={styles.footer__icon} src='/images/parcel2.png'  alt=''/>
 						<p>분양정보</p>
 						</Link> 
 					</div>	
 					<div class={styles.footer__item}> 
 						<Link to='/'>
-						<img class={styles.footer__contents__image} src='/images/position2.png'  alt=''/>
+						<img class={styles.footer__icon} src='/images/position2.png'  alt=''/>
 						<p>지역정보</p>
 						</Link> 
 					</div>
 					<div class={styles.footer__item}>
 						<Link to='/'>
-						<img class={styles.footer__contents__image} src='/images/user2.png'  alt=''/>   
+						<img class={styles.footer__icon} src='/images/user2.png'  alt=''/>   
 						<p>사용자</p>
 						</Link> 
 					</div>		

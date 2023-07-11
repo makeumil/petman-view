@@ -30,6 +30,7 @@ export default Slide;
 
 const settings = {
     dots: true,
+    arrows: false,
     infinite: true,
     speed: 500, 
     slidesToShow: 1,
@@ -61,10 +62,11 @@ const StyledSlider = styled(Slider)`
 
 const CardInfo = styled.div`
     width: 100%; 
+    height: 100%;
 `;
 const CardWrap = styled.div`
     position: relative;
-    padding-top: 70%;  
+    padding-top: 120%;  
     overflow: hidden; 
 `;
 const CardImg = styled.img`

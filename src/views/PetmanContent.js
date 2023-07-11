@@ -34,7 +34,6 @@ const PetmanContent = () => {
 
             {/* 하단 Content 30% */}
             <div class={styles.main__contents}>
-                {/* User정보 */}
                 <div class='user'>
                     <div class='user__circle'>
                         <img class='user__image' src='/upload/puppy2.jpg'/>
@@ -58,7 +57,6 @@ const PetmanContent = () => {
                     </div>   
                 </div>
    
-                {/* 글 내용 */}
                 <div class={styles.main__content__wrap}>
                     <div class={styles.main__content}>
                         <span>Ad commodo occaecat ullamco voluptate aute labore sint nostrud adipisicing aute. Ut reprehenderit magna nisi cillum enim. Eiusmod tempor in do non sint culpa commodo nostrud anim do aute ipsum sit excepteur. Dolor ex magna sit incididunt sunt consectetur Lorem incididunt pariatur incididunt. Est consequat amet pariatur dolor nulla aute minim excepteur eu veniam magna veniam fugiat velit. Ex nostrud non id dolor in.
@@ -74,9 +72,7 @@ Magna veniam Lorem pariatur officia ad fugiat officia elit.</span>
                     </div>                    
                 </div>
 
-                {/* 댓글 리스트 desc sort */}
-                <div class={styles.main__content__reaction}>                    
-                    {/* User정보 */}
+                <div class={styles.main__content__reaction}>      
                     <div class='user'>
                         <div class='user__circle'>
                             <img class='user__image' src='/upload/puppy4.jpg'/>
@@ -94,7 +90,6 @@ Magna veniam Lorem pariatur officia ad fugiat officia elit.</span>
                         </div>
                     </div>
     
-                    {/* 글 내용 */}
                     <div class={styles.main__content__wrap}>
                         <div class={styles.main__content}>
                             <span>Amet incididunt id sint dolore deserunt. </span>
@@ -105,8 +100,7 @@ Magna veniam Lorem pariatur officia ad fugiat officia elit.</span>
                     </div>
                 </div>
 
-                <div class={styles.main__content__reaction}>                    
-                    {/* User정보 */}
+                <div class={styles.main__content__reaction}>       
                     <div class='user'>
                         <div class='user__circle'>
                             <img class='user__image' src='/upload/puppy8.jpg'/>
@@ -124,7 +118,6 @@ Magna veniam Lorem pariatur officia ad fugiat officia elit.</span>
                         </div>
                     </div>
     
-                    {/* 글 내용 */}
                     <div class={styles.main__content__wrap}>
                         <div class={styles.main__content}>
                             <span>Esse esse mollit aliqua non. </span>
@@ -135,8 +128,7 @@ Magna veniam Lorem pariatur officia ad fugiat officia elit.</span>
                     </div>
                 </div>
 
-                <div class={styles.main__content__reaction}>                    
-                    {/* User정보 */}
+                <div class={styles.main__content__reaction}>      
                     <div class='user'>
                         <div class='user__circle'>
                             <img class='user__image' src='/upload/puppy12.jpg'/>
@@ -154,7 +146,6 @@ Magna veniam Lorem pariatur officia ad fugiat officia elit.</span>
                         </div>
                     </div>
     
-                    {/* 글 내용 */}
                     <div class={styles.main__content__wrap}>
                         <div class={styles.main__content}>
                             <span>Ut dolor magna fugiat sunt ex aliquip incididunt elit dolor reprehenderit dolore. </span>
