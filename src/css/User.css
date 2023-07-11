@@ -33,12 +33,12 @@
     color: wheat;
 }
 .user__area{
-    font-size:  1rem;
+    font-size:  1.2rem;
     padding-left: 20px;
     color: gray;
 }
 .user__pet{
-    font-size:  1rem;
+    font-size:  1.2rem;
     color: gray;
 }
 
@@ -49,10 +49,10 @@
         font-weight: bold;
     }
     .user__area{
-        font-size:  1.5rem;
+        font-size:  2rem;
     }
     .user__pet{
-        font-size:  1.5rem;
+        font-size:  2rem;
     }
     .user__circle{
         width: 80px;
