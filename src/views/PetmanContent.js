@@ -11,6 +11,7 @@ const PetmanContent = () => {
     const sliders = [ '/upload/puppy1.jpg', 
                       '/upload/puppy2.jpg', 
                       '/upload/puppy3.jpg' ];
+                    
 
 	return (
 		<>
@@ -54,7 +55,7 @@ const PetmanContent = () => {
                         <Link to='/'>
                             <img class={styles.icon__image} src='/images/trashcan.png'/>   
                         </Link>
-                    </div>
+                    </div>   
                 </div>
    
                 {/* 글 내용 */}
@@ -169,12 +170,14 @@ Magna veniam Lorem pariatur officia ad fugiat officia elit.</span>
         
             {/* fix Footer */}
             <div class={styles.footer}>
-
+                <form action='/content'>
+                    <input type='text' id='reply' class={styles.footer__reply} placeholder='댓글을 작성해 주세요' />
+                    <input type='image' id='submit' class={styles.footer__send} name='submit' src='/images/send2.png'/>
+                </form>    
             </div>
         </>
     );
 };
 
 
-export default PetmanContent;      
-
+export default PetmanContent;
