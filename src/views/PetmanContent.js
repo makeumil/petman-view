@@ -69,6 +69,12 @@ Magna veniam Lorem pariatur officia ad fugiat officia elit.</span>
                     </div>
                     <div class={styles.main__content__date}>
                         <span>1시간전</span>
+                        <div class={styles.main__content__good}>
+                            <Link to='/detail'>
+                                <img src='/images/heart.png'  alt=''/>
+                            </Link>
+                            <span>7</span>
+                        </div>
                     </div>                    
                 </div>
 
