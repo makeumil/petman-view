@@ -19,39 +19,19 @@ html{
     height: 140px;
     padding: 0 16px;
 }
-
-.header__humburger{
-    border: none;
-    background-color: transparent;
-    font-size: 5rem;
-    color: white;
-}
 .header__title{
     font-size: 2em;
     margin-left: 6px;
 }
 .header__area{
-    font-size: 3.5rem;
+    font-size: 2rem;
     margin-left: 16px;
     vertical-align: top;
     text-decoration-line: none;
 }
-.header__search{
-    width: 60px;
-    height: 60px;
-    border: none;
-    background-color: transparent;
-}
-.header__alarm{
-    width: 60px;
-    height: 60px;
-    border: none;
-    background-color: transparent;
-    margin-left: 30px;
-}
 .header__icon{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border: none;
     background-color: transparent;
     margin: 0px 30px;
@@ -87,20 +67,19 @@ html{
 }
 .thumbs__profile__group{
     align-items: center;
-    height: 60px;
+    height: 30px;
 }
-.thumbs__profile__title{
-}
+
 .thumbs__text{
     width: 100%;
-    height: calc(100% - 180px);
+    /* height: calc(100% - 180px); */
 }
 .thumbs__text__date{
-    font-size:  1rem;
+    font-size:  0.8rem;
     color: gray;
 }
 .thumbs__text__content{   
-    font-size:  2.5rem;
+    font-size:  1rem;
     margin-top: 2rem;
     margin-bottom: 0.5em;
 }
@@ -159,8 +138,8 @@ html{
     float: left;
     display: flex;
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     cursor: pointer;
     justify-content: center;
@@ -266,15 +245,25 @@ html{
 
 
 @media screen and (max-width: 1000px) {
+    .header__area{
+        font-size: 3.5rem;
+    }
+    .header__icon{
+        width: 80px;
+        height: 80px;        
+    }
     .thumbs__wrapper{
         margin: 120px 0 180px 0;
         padding: 20px 0 0 0;
+    }
+    .thumbs__profile__group{
+        height: 60px;
     }
     .thumbs__item{
         width: 100%;
     }
     .thumbs__text__date{
-        font-size:  1.5rem;
+        font-size:  2rem;
     }
     .thumbs__text__content{
         font-size:  3rem;
@@ -293,6 +282,10 @@ html{
     }
     .floating__button {
         bottom: 190px;
+    }
+    .move__board {
+        width: 200px;
+        height: 200px;
     }
     .nav__wrapper{
         display: none;

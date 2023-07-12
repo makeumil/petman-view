@@ -28,17 +28,17 @@
     vertical-align: middle;
 }
 .user__name{
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     color: wheat;
 }
 .user__area{
-    font-size:  1.2rem;
+    font-size:  0.8rem;
     padding-left: 20px;
     color: gray;
 }
 .user__pet{
-    font-size:  1.2rem;
+    font-size:  0.8rem;
     color: gray;
 }
 
