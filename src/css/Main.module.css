@@ -54,9 +54,10 @@
     text-align: right;
 }
 .header__notice__alarm span{
-    display: none;
+    /* display: none; */
     color: red;
-    font-size: 3rem;
+    font-size: 3rem;    
+    text-decoration: none;  
 }
 .thumbs__wrapper{
     display: flex;
@@ -84,7 +85,7 @@
 .thumbs__info{
     width: 70%;
     max-width: 100%;
-    margin: 0 10px 0 10px;
+    margin: 0 0px 20px 20px;
 }
 .thumbs__profile__group{
     align-items: center;
@@ -272,7 +273,7 @@
     }
     .header__icon, .header__icon__notice, .header__notice__alarm{
         width: 80px;
-        height: 80px;      
+        height: 80px;    
     }
     .header__notice__group{
         margin-right: 80px;

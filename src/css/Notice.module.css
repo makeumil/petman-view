@@ -62,8 +62,18 @@
     color: rgb(212, 212, 212);
 }
 .notice__date{
-    margin-left: 30px;
-    font-size: 1.2rem;
+    margin-left: 30px;    
     padding: 30px;
     color: gray;
 }
+.notice__date span{
+    font-size: 1.2rem;
+}
+@media screen and (max-width: 1000px) {
+    .notice__content span{
+        font-size: 3.5rem;
+    }
+    .notice__date span{
+        font-size: 2rem;
+    }
+}    

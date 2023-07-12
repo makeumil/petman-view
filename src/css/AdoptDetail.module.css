@@ -80,10 +80,21 @@
     width: 100%;
     font-size: 2rem;
     color: white;
+    vertical-align: middle;
+}
+.main__content th{
+    text-align: left;
+    vertical-align: middle;
+    font-weight: bold;
+    border-bottom: 1px dotted gray;
+}
+.main__content tr{
+    height: 150px;    
 }
 .main__content td{
-    padding-top: 20px 40px 20px 0px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px dotted gray;
+    vertical-align: middle;
+    padding-right: 20px;
 }
 .main__content__date{
     display: flex;
@@ -91,6 +102,9 @@
     font-size: 1.2rem;
     padding: 30px;
     color: gray;
+}
+.main__content span{
+    color: wheat;
 }
 .main__content__good{
     display: flex;

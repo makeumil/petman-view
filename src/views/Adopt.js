@@ -23,14 +23,14 @@ const Adopt = () => {
 						<Link to='/catalog'>
 							<img class={styles.header__icon} src='/images/menu.png' alt=''></img>
 						</Link>	
-						<div class={styles.header__notice__group}>
-							<Link to='/notice'>							
+						<Link to='/notice'>	
+							<div class={styles.header__notice__group}>
 								<img class={styles.header__icon__notice} src='/images/alarm2.png' alt=''></img>
-							</Link>
-							<div class={styles.header__notice__alarm}>
-								<span>&#x2022;</span>
+								<div class={styles.header__notice__alarm}>
+									<span>&#x2022;</span>
+								</div>
 							</div>
-						</div>
+						</Link>
 					</div>
 				</div>	
 			</div>
@@ -87,7 +87,7 @@ const Adopt = () => {
 								</div>	
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Amet eiusmod nulla eiusmod Lorem non ullamco consequat veniam et quis tempor dolor officia pariatur. Sint aliqua est ea ipsum sint commodo elit occaecat. Voluptate amet cupidatat elit tempor.</h1>
+								<h1 class={styles.thumbs__text__content}>Amet eiusmod nulla eiusmod Lorem non ullamco consequat veniam ...</h1>
 								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 
@@ -407,11 +407,11 @@ function Floting_Btn() {
 		window.addEventListener('scroll', updateScroll);
 	});
 	return (
-		<div class={styles.floating__button}> 
-            <Link to='/'> 
-			    <span class={styles.move__board}>+분양하기</span>
-            </Link> 
-		</div> 
+		<Link to='/'> 
+			<div class={styles.floating__button}> 
+					<span class={styles.move__board}>+분양하기</span>
+			</div>
+		</Link>  
 	);
 };
 

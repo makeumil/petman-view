@@ -58,54 +58,66 @@ const AdoptDetail = () => {
                     <div class={styles.main__content}>
                         <table>
                             <tr height='120px'>
-                                <td colSpan='2'>말티푸 분양합니다.</td>
+                                <th colSpan='3'><p>말티푸 분양합니다.</p></th>
                             </tr>
                             <tr>
-                                <td>&#x2022; 종</td>
+                                <td><span>&#x2022;</span></td>
+                                <td>종</td>
                                 <td>말티푸</td>
                             </tr>
                             <tr>
-                                <td>&#x2022; 분양지역</td>
+                                <td><span>&#x2022;</span></td>
+                                <td> 분양지역</td>
                                 <td>서울 강서구 화곡동</td>
                             </tr>                            
                             <tr>
-                                <td>&#x2022; 이름</td>
+                                <td><span>&#x2022;</span></td>
+                                <td>이름</td>
                                 <td>두부</td>
                             </tr>
                             <tr>
-                                <td>&#x2022; 성별</td>
+                                <td><span>&#x2022;</span></td>
+                                <td>성별</td>
                                 <td>여</td>
                             </tr>
                             <tr>
-                                <td>&#x2022; 생년월일</td>
+                                <td><span>&#x2022;</span></td>
+                                <td>생년월일</td>
                                 <td>2022.12.01</td>
                             </tr>
                             <tr>
-                                <td>&#x2022; 접종내역</td>
+                                <td><span>&#x2022;</span></td>
+                                <td>접종내역</td>
                                 <td>종합백신 2차까지 맞았어요.</td>
                             </tr>
                             <tr>
-                                <td>&#x2022; 연락처</td>
+                                <td><span>&#x2022;</span></td>
+                                <td>연락처</td>
                                 <td>xxx-xxxx-xxxx</td>
                             </tr>
                             <tr>
-                                <td>&#x2022; 동물판매업 허가번호</td>
+                                <td><span>&#x2022;</span></td>
+                                <td>동물판매업 허가번호</td>
                                 <td>3370000-045-2023-0001</td>
                             </tr>
                             <tr>
-                                <td>&#x2022; 사진 촬영 일자</td>
+                                <td><span>&#x2022;</span></td>
+                                <td>사진촬영일자</td>
                                 <td>2023-07-01</td>
                             </tr>
                             <tr>
-                                <td>&#x2022; 분양가/책임비</td>
+                                <td><span>&#x2022;</span></td>
+                                <td>분양가/책임비</td>
                                 <td>10만원</td>
                             </tr>
                             <tr>
-                                <td>&#x2022; 기타비용</td>
+                                <td><span>&#x2022;</span></td>
+                                <td>기타비용</td>
                                 <td>용품 구매 및 마이크로칩 이전 비용</td>
                             </tr>
                             <tr>
-                                <td>&#x2022; 기타</td>
+                                <td><span>&#x2022;</span></td>
+                                <td>기타</td>
                                 <td>특이사항 없음.</td>
                             </tr>
                         </table>    
@@ -113,7 +125,7 @@ const AdoptDetail = () => {
                     <div class={styles.main__content__date}>
                         <span>1시간전</span>
                         <div class={styles.main__content__good}>
-                            <Link to='/detail'>
+                            <Link to='/adopt/detail'>
                                 <img src='/images/pin.png'  alt=''/>
                             </Link>
                         </div>

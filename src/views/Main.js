@@ -87,7 +87,7 @@ const Main = () => {
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Amet eiusmod nulla eiusmod Lorem non ullamco consequat veniam et quis tempor dolor officia pariatur. Sint aliqua est ea ipsum sint commodo elit occaecat. Voluptate amet cupidatat elit tempor.</h1>
+								<h1 class={styles.thumbs__text__content}>Amet eiusmod nulla eiusmod Lorem non ullamco consequat ... </h1>
 								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 
