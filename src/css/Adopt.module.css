@@ -85,7 +85,7 @@
 .thumbs__info{
     width: 70%;
     max-width: 100%;
-    margin: 0px 0px 20px 20px;
+    margin: 0px 20px 20px 20px;
 }
 .thumbs__profile__group{
     align-items: center;
@@ -132,7 +132,7 @@
     display: flex;
     position: fixed;
     right: 10px;
-    bottom: 10px;
+    bottom: 60px;
     z-index: 999;
 
     float: left;
@@ -290,17 +290,17 @@
         font-size:  2.5rem;
     }
     .floating__button{
-        width: 200px;
+        width: 250px;
         height: 100px;
     }
     .move__board {
-        font-size: 2rem;      
+        font-size: 3rem;      
     }
     .nav__wrapper{
         display: none;
     }
     .floating__button {
-        bottom: 190px;
+        bottom: 240px;
     }
 }
 

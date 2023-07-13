@@ -129,6 +129,7 @@
     left: 0px;
     bottom: 0px;
     background-color: rgb(28, 28, 28);
+    z-index: 999;
 }
 .footer form{
     display: flex;

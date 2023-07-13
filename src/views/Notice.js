@@ -92,6 +92,20 @@ const Notice = () => {
                             </div>                    
                     </div>
                 </div>
+
+                <div class={styles.notice__content}>                          
+                    <div class={styles.notice__bullet}>
+                        <span>&#x2022;</span>
+                    </div>    
+                        <div class={styles.notice__wrap}>
+                            <div class={styles.notice}>
+                                <span>Commodo Lorem enim aliqua cupidatat elit dolor consequat voluptate consectetur ipsum. Aliquip pariatur deserunt eu elit in eu occaecat et.</span>
+                            </div>
+                            <div class={styles.notice__date}>
+                                <span>1일전</span>
+                            </div>                    
+                    </div>
+                </div>
             </div>    
         </>
     );

@@ -407,7 +407,7 @@ function Floting_Btn() {
 		window.addEventListener('scroll', updateScroll);
 	});
 	return (
-		<Link to='/'> 
+		<Link to='/adopt/reg'> 
 			<div class={styles.floating__button}> 
 					<span class={styles.move__board}>+분양하기</span>
 			</div>

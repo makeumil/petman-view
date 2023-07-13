@@ -1,10 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom';
-import styles from '../css/PetmanContent.module.css';
+import styles from '../css/PetmanDetail.module.css';
 import '../css/User.css';
 import React, {useState, useEffect} from 'react';
 import Slide from './Slide';
 
-const PetmanContent = () => {
+const PetmanDetail = () => {
     
     const navigate = useNavigate();
  
@@ -177,4 +177,4 @@ Magna veniam Lorem pariatur officia ad fugiat officia elit.</span>
 };
 
 
-export default PetmanContent;
+export default PetmanDetail;
