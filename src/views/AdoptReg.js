@@ -77,7 +77,7 @@ const AdoptReg = () => {
                                 <tr>
                                     <td><span>&#x2022;</span></td>
                                     <td>접종내역</td>
-                                    <td><input type='textarea' id='vaccine' name='vaccine' placeholder=''></input></td>
+                                    <td><textarea id='vaccine' name='vaccine' placeholder=''/></td>
                                 </tr>
                                 <tr>
                                     <td><span>&#x2022;</span></td>
@@ -107,7 +107,7 @@ const AdoptReg = () => {
                                 <tr>
                                     <td><span>&#x2022;</span></td>
                                     <td>기타</td>
-                                    <td><input type='textarea' id='etc' name='etc' placeholder=''></input></td>
+                                    <td><textarea id='etc' name='etc' placeholder=''/></td>
                                 </tr>
                             </table>    
                         </div>                    

@@ -49,18 +49,18 @@
     align-items: center;
     vertical-align: middle;
     justify-content: center;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 300px;
     border: 10px solid gray;
     border-radius: 5%;
     background-color: transparent;
     margin: 170px 0px 0px 30px;
 }
 .picture img{
-    width: 250px;
+    width: 150px;
 }
 .picture__text{
-    width: 500px;
+    width: 400px;
     height: 30px;
     text-align: center;
     margin: 30px 0px 0px 30px;
@@ -79,24 +79,29 @@ input[type=text]{
     background-color: rgb(73, 73, 73);
     box-sizing: border-box;
     margin: 10px;
+    border: solid 2px #1E90FF;
 }
-input[type=textarea]{
+textarea{
     color: whitesmoke;
     font-size: 2rem;
     width: 100%;
     height: 300px;
     padding: 10px;
     background-color: rgb(73, 73, 73);
-    box-sizing: border-box;
     margin: 10px;
+    resize: both;
+    box-sizing: border-box;
+    border: solid 2px #1E90FF;
 }
 
 
 label {
     font-size: 2rem;
-    color: whitesmoke;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
     line-height: 2rem;
-    padding: 0.2rem 2rem;
+    padding: 0rem 2rem;
   }
 [type="radio"], span {
     vertical-align: middle;
@@ -104,7 +109,7 @@ label {
   
   [type="radio"] {
     appearance: none;
-    border: max(2px, 0.1em) solid gray;
+    border: max(2px, 0.1em) solid #1E90FF;
     border-radius: 50%;
     width: 3em;
     height: 3em;
@@ -113,7 +118,7 @@ label {
   }
   
   [type="radio"]:checked {
-    border: 0.4em solid tomato;
+    border: 0.6em solid tomato;
   }
   
   /* [type="radio"]:focus-visible {
@@ -236,7 +241,7 @@ input::placeholder{
     .picture__text span{
         font-size: 3rem;
     }    
-    input[type=text], input[type=textarea], label{
+    input[type=text], input[type=textarea], label, textarea{
         font-size: 3.5rem;
     }
 }    
