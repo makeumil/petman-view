@@ -11,9 +11,13 @@ const Kakao = () => {
 
     const { kakao } = window;
     const infowindow = new kakao.maps.InfoWindow({zIndex:1});
-    const [info, setInfo] = useState()
+    const initInfo = {'content':'', 'address':'', 'phone':''};
+    const [info, setInfo] = useState(initInfo)
     const [markers, setMarkers] = useState([])
     const [map, setMap] = useState()
+
+ 
+
 
     const area = '계양구';
     const selectList = ["동물병원", "애견미용실", "애견카페"];
@@ -95,7 +99,7 @@ const Kakao = () => {
                   width: "100%",
                   height: "100%",
               }}
-              level={3}
+              level={2}
               onCreate={setMap}
               >
               {markers.map((marker) => (
@@ -117,21 +121,28 @@ const Kakao = () => {
                       // }}
                       onClick={() => setInfo(marker)}
                       >
-                      {info &&info.content === marker.content && (
-                          // <div style={{color:"#000"}}>{marker.content}</div>
+                     {info &&info.content === marker.content && (
+                 
+                          <div style={{color:"#000"}}>{marker.content}</div>
                     
-                          <div style={{ display: "flex", width: "350px", height: "70px", padding: "5px", color: "#000"}}>                        
-                            <img style={{ width: "30px", height: "30px"}} src='/images/footprint-red.png' />
-                            상호 : {marker.content}<br />
-                            주소 : {marker.address}<br />
-                            전화번호 : {marker.phone}<br />
-                          </div>
-                      )}
+                          // <div class={styles.info}>                        
+                          //   <img style={{ width: "30px", height: "30px"}} src='/images/footprint-red.png' />
+                          //   {marker.content}<br />
+                          //   {marker.address}<br />
+                          //   {marker.phone}<br />
+                          // </div>
+                      )} 
                       </MapMarker>
                   ))}
           </Map>
         </div>
 
+        <div class={styles.footer}>
+           <div>&#x2022; {info.content}</div>
+           <div>&#x2022; {info.address}</div>
+           <div>&#x2022; {info.phone}</div>
+          
+        </div>
         </>
 	);
 }    
