@@ -12,6 +12,11 @@ import Adopt from './views/Adopt';
 import AdoptDetail from './views/AdoptDetail';
 import AdoptReg from './views/AdoptReg';
 import AdoptUpdate from './views/AdoptUpdate';
+import PetmanList from './views/PetmanList';
+import PetmanReg from './views/PetmanReg';
+import Kakao from './views/Map';
+
+import Test from './views/Test';
 
 const App = () => {
 	return (
@@ -25,6 +30,10 @@ const App = () => {
 					<Route path="/adopt/detail" element={<AdoptDetail />}></Route>
 					<Route path="/adopt/reg" element={<AdoptReg />}></Route>
 					<Route path="/adopt/update" element={<AdoptUpdate />}></Route>
+					<Route path="/petman/list" element={<PetmanList />}></Route>
+					<Route path="/petman/reg" element={<PetmanReg />}></Route>
+					<Route path="/map" element={<Kakao />}></Route>
+					<Route path="/test" element={<Test />}></Route>
 					{/* <Route path="/product/*" element={<Product />}></Route> */}
 					{/* 상단에 위치하는 라우트들의 규칙을 모두 확인, 일치하는 라우트가 없는경우 처리 */}
 					<Route path="*" element={<NotFound />}></Route>

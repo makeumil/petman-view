@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState  } from "react";
 import Slider from "react-slick";
 import styles from 'slick-carousel/slick/slick.css';
 import theme from 'slick-carousel/slick/slick-theme.css';
@@ -7,7 +7,14 @@ import { ReactComponent as Next } from "../svg/right.svg";
 import { ReactComponent as Prev } from "../svg/left.svg";
 
 function Slide(props) {
-  let { content } = props;   
+
+  const { content } = props;    
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModalHandler = () => {
+    setIsOpen(!isOpen) 
+  };
 
   const settings = {
     dots: true,
@@ -18,7 +25,7 @@ function Slide(props) {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: '0px',
-  
+    // initialSlide: 2,
     nextArrow: (
         <Div>
           <Next />
@@ -31,22 +38,45 @@ function Slide(props) {
       ),
   };
 
+
+
   return (
+ 
+   
       <div className={styles.carousel}>
         <StyledSlider {...settings}>
           {content.map((image)=>{
             return (
                <CardInfo>
-                <CardWrap>
-                    <CardImg src={image} /> 
-                </CardWrap>   
+                  <CardWrap>
+                    <CardImg src={image} onClick={openModalHandler}/> 
+                  </CardWrap>   
                </CardInfo> 
             );
           })}
         </StyledSlider>
-      </div>
-    );
+     
 
+        {isOpen ? 
+        <div className={styles.carousel}>
+        <ModalBackdrop>         
+            <ModalView onClick={(e) => e.stopPropagation()}>
+              <ExitBtn onClick={openModalHandler}>x</ExitBtn>
+              <StyledSlider {...settings}>
+                    <img src='/upload/puppy10.jpg'/> 
+              </StyledSlider>
+
+            </ModalView>
+          </ModalBackdrop> 
+          </div>
+          : null
+        }
+
+      </div>
+        
+       
+    );
+ 
 }
 
 
@@ -100,6 +130,7 @@ const CardImg = styled.img`
     height: auto;
     object-fit:cover;
 `;
+
 const CardText = styled.p`
     padding: 20px;
     font-size: 20px;
@@ -135,5 +166,71 @@ const Div = styled.div`
 `;
 
 
+// 모달 css
+const ModalContainer = styled.div`
+  // Modal을 구현하는데 전체적으로 필요한 CSS를 구현
+  display : flex;
+  justify-content : center;
+  align-items : center;
+  height : 100%;
+`;
+
+const ModalBackdrop = styled.div`
+  // Modal이 떴을 때의 배경을 깔아주는 CSS를 구현
+  z-index: 999; //위치지정 요소
+  position: fixed;
+  display : flex;
+  justify-content : center;
+  align-items : center;
+  // background-color: rgba(0,0,0,0.4);
+  background-color: rgb(20, 20, 20);
+  border-radius: 10px;
+  top : 0;
+  left : 0;
+  right : 0;
+  bottom : 0;
+  width: 100%;
+  height: 100%;
+`;
+
+const ModalBtn = styled.button`
+  background-color: var(--coz-purple-600);
+  text-decoration: none;
+  border: none;
+  padding: 20px;
+  color: white;
+  border-radius: 30px;
+  cursor: grab;
+  width: 100%;
+  height: 100%;
+`;
+
+const ExitBtn = styled(ModalBtn) `
+  background-color : black;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  display : flex;
+  justify-content : top;
+  align-items : left;
+  color: white;
+  font-size: 3rem;
+`;
+
+const ModalView = styled.div.attrs((props) => ({
+  role: 'dialog',
+}))`
+  // Modal창 CSS를 구현합니다.
+  display: flex;
+  align-items: left;
+  vertical-align: top;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 100%;
+  heigth: 100%;
+
+ `;
 
 export default Slide;

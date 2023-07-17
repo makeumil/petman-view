@@ -45,7 +45,7 @@ const AdoptDetail = () => {
                         </div>	
                     </div>
                     <div class={styles.icon__group}>
-                        <Link to='/'>
+                        <Link to='/adopt/update'>
                             <img class={styles.icon__image} src='/images/write2.png'/>
                         </Link>
                         <Link to='/'>

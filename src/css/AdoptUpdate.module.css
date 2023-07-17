@@ -1,0 +1,247 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;   
+    color: white;
+    background-color: black;
+}
+.header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 140px;
+    padding: 0 16px;
+}
+.header__back{
+    width: 80px;
+    height: 80px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.header__back:hover{
+    cursor: pointer;
+}
+.header__home{
+    width: 80px;
+    height: 80px;
+    border: none;
+    background-color: transparent;
+}
+.header__share{
+    width: 80px;
+    height: 80px;
+    border: none;
+    background-color: transparent;
+}
+.header__left{
+    left : 0;
+    height: 40px;
+}
+.header__right{
+    right: 0;
+    height: 40px;
+}
+
+.picture{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    width: 400px;
+    height: 300px;
+    border: 10px solid gray;
+    border-radius: 5%;
+    background-color: transparent;
+    margin: 170px 0px 0px 30px;
+}
+.picture img{
+    width: 150px;
+}
+.picture__text{
+    width: 400px;
+    height: 30px;
+    text-align: center;
+    margin: 30px 0px 0px 30px;
+}
+.picture__text span{
+    font-size: 2rem;
+    color: lightgray;
+}
+
+input[type=text]{
+    color: whitesmoke;
+    font-size: 2rem;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    background-color: rgb(73, 73, 73);
+    box-sizing: border-box;
+    margin: 10px;
+    border: solid 2px #1E90FF;
+}
+textarea{
+    color: whitesmoke;
+    font-size: 2rem;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    background-color: rgb(73, 73, 73);
+    margin: 10px;
+    resize: both;
+    box-sizing: border-box;
+    border: solid 2px #1E90FF;
+}
+
+
+label {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2rem;
+    padding: 0rem 2rem;
+  }
+[type="radio"], span {
+    vertical-align: middle;
+  }
+  
+  [type="radio"] {
+    appearance: none;
+    border: max(2px, 0.1em) solid #1E90FF;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    /* transition: border 0.5s ease-in-out; */
+    padding: 20px;
+  }
+  
+  [type="radio"]:checked {
+    border: 0.6em solid tomato;
+  }
+  
+  /* [type="radio"]:focus-visible {
+    outline-offset: max(2px, 0.1em);
+    outline: max(2px, 0.1em) dotted tomato;
+  }
+  
+  [type="radio"]:hover {
+    box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+    cursor: pointer;
+  }
+  
+  [type="radio"]:hover + span {
+    cursor: pointer;
+  }
+  
+  [type="radio"]:disabled {
+    background-color: lightgray;
+    box-shadow: none;
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  [type="radio"]:disabled + span {
+    opacity: 0.7;
+    cursor: not-allowed;
+  } */
+
+  
+
+input::placeholder{
+	color: rgb(118, 118, 118);
+	font-size: 3rem;
+    text-align: center;
+}
+
+.main__contents{
+    width: 100%;
+    margin: 140px 0px 120px 0px;
+    background-color: transparent;
+}
+.main__content__wrap{
+    width: 100%;
+    padding-bottom: 30px;
+}
+.main__content{
+    padding: 30px 30px 20px 30px;
+    word-break: break-all;
+}
+.main__content table{
+    width: 100%;
+    font-size: 2rem;
+    color: white;
+    vertical-align: middle;
+}
+
+.main__content tr{
+    height: 150px;    
+}
+.main__content td{
+    border-bottom: 1px dotted gray;
+    vertical-align: middle;
+    padding-right: 20px;
+}
+.main__content__date{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding: 30px;
+    color: gray;
+}
+.main__content span{
+    color: wheat;
+}
+
+
+.icon__group{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    text-align: right;
+    vertical-align: middle;
+    padding: 10px 30px 10px 10px;
+}
+.icon__image{
+    width: 60px;
+    height: 60px;
+    margin-left: 30px;
+}
+
+.form__submit{
+    position: fixed; 
+    align-items: center;
+    justify-content: center;
+    border: 3px solid wheat;
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    left: 0px;
+    bottom: 0px;
+    color: white;
+    font-size: 3rem;
+    background-color: rgb(255, 51, 0);
+    z-index: 999;
+}
+@media screen and (max-width: 1000px) {
+    .main__content table{
+        font-size: 3.5rem;
+    }
+    .main__content__date{
+        font-size: 2.5rem;
+    }
+    .main__image{
+        max-width: 100%;
+    }
+    .icon__image{
+        width: 80px;
+        height: 80px;
+    }   
+    .picture__text span{
+        font-size: 3rem;
+    }    
+    input[type=text], input[type=textarea], label, textarea{
+        font-size: 3.5rem;
+    }
+}    
