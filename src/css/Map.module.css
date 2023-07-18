@@ -53,6 +53,8 @@
     height: 100vh;
 }
 .footer{
+    display:flex;
+    justify-content: space-between;
     position: fixed; 
     width: 100%;
     height: 150px;
@@ -65,6 +67,15 @@
     font-size : 1.5rem;
     padding: 20px;
     color: wheat;
+    align-items: center;
+}
+.footer__contents{
+    margin-left: 30px;
+}
+.footer__call img{
+    width: 120px;
+    height: 120px;  
+    margin-right: 50px;  
 }
 
 @media screen and (max-width: 1000px) {

@@ -26,6 +26,18 @@ const Kakao = () => {
       e.preventDefault();
     };
 
+    var pin = '/images/marker-blue.png';
+    if (selectValue==='동물병원') {
+        pin = '/images/marker-blue.png';
+    }
+    if (selectValue==='애견미용실') {
+        pin = '/images/marker-pink.png';
+    }
+    if (selectValue==='애견카페') {
+        pin = '/images/marker-red.png';
+    }
+
+
     useEffect(() => {
         if (!map) return
         const ps = new kakao.maps.services.Places();            
@@ -95,26 +107,27 @@ const Kakao = () => {
                   width: "100%",
                   height: "100%",
               }}
-              level={3}
+              level={1}
               onCreate={setMap}
               >
               {markers.map((marker) => (
                       <MapMarker
                       key={`marker-${marker.content}-${marker.position.lat},${marker.position.lng}`}
                       position={marker.position}
-                      // image={{
-                      //   src: "/images/pin2-blue.png", 
-                      //   size: {
-                      //     width: 64,
-                      //     height: 69,
-                      //   }, 
-                      //   options: {
-                      //     offset: {
-                      //       x: 27,
-                      //       y: 69,
-                      //     },
-                      //   },
-                      // }}
+                      image={{
+                        // src: "/images/marker-blue.png", 
+                        src: pin,
+                        size: {
+                          width: 80,
+                          height: 85,
+                        }, 
+                        options: {
+                          offset: {
+                            x: 27,
+                            y: 69,
+                          },
+                        },
+                      }}
                       onClick={() => setInfo(marker)}
 
                       >
@@ -147,11 +160,34 @@ function Footer(props) {
     <>
       { info.content !== '' && 
              <div  class={styles.footer}>
-              <div>&#x2022; {info.content}</div>
-              <div>&#x2022; {info.address}</div>
-              <div>&#x2022; {info.phone}</div>          
+
+                <div class={styles.footer__contents}>
+                    <div>&#x2022; {info.content}</div>
+                    <div>&#x2022; {info.address}</div>
+                    <div>&#x2022; {info.phone}</div>          
+                </div>
+            
+                 <Footer_Call val={info} />
+
             </div>
       }
+    </>
+  )
+}
+
+function Footer_Call(props) {
+  const { val } = props;
+  const phonenum = 'tel:' + val.phone;
+ 
+  return (
+    <>
+    { val.phone !== '' && 
+      <div class={styles.footer__call}>
+        <a href={phonenum}>
+          <img src='/images/call1.png' alt='전화걸기' title='전화걸기' />
+        </a>   
+      </div>
+    }   
     </>
   )
 }

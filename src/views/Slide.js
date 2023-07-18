@@ -11,9 +11,14 @@ function Slide(props) {
   const { contents } = props;    
 
   const [isOpen, setIsOpen] = useState(false);
+  const [state,  setState] = useState({
+    activeIndex: 0,
+    changedIndex: 0,
+  });
 
   const openModalHandler = () => {
-    setIsOpen(!isOpen) 
+    setIsOpen(!isOpen)    
+    // this.slider.slickGoTo(state.updateCount);
   };
 
   const settings = {
@@ -25,7 +30,9 @@ function Slide(props) {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: '0px',
-    // initialSlide: 2,
+    initialSlide: state.changedIndex,
+    beforeChange: (current, next) => setState({ activeIndex: next  }),
+    afterChange: current => setState({ changedIndex: current }),
     nextArrow: (
         <Div>
           <Next />
@@ -38,44 +45,45 @@ function Slide(props) {
       ),
   };
 
+  return ( 
+      <>
 
-
-  return (
- 
-   
       <div className={styles.carousel}>
         <StyledSlider {...settings}>
           {contents.map((image)=>{
             return (
-               <CardInfo>
-                  <CardWrap>
-                    <CardImg src={image} onClick={openModalHandler}/> 
-                  </CardWrap>   
-               </CardInfo> 
+               <SliderInfo>
+                  <SliderWrap>
+                    <SliderImg src={image} onClick={openModalHandler}/> 
+                  </SliderWrap>   
+               </SliderInfo> 
             );
           })}
-        </StyledSlider>
-     
+        </StyledSlider>     
+      </div>
 
-        {isOpen ? 
+      {isOpen ? 
         <div className={styles.carousel}>
         <ModalBackdrop>         
             <ModalView onClick={(e) => e.stopPropagation()}>
               <ExitBtn onClick={openModalHandler}>x</ExitBtn>
               <StyledSlider {...settings}>
-                    <img src='/upload/puppy10.jpg'/> 
+              {contents.map((image)=>{
+                return (
+                  <ModalInfo>
+                     <ModalImg src={image}/> 
+                  </ModalInfo>   
+                );
+               })}
               </StyledSlider>
-
             </ModalView>
           </ModalBackdrop> 
           </div>
           : null
-        }
+      }
 
-      </div>
-        
-       
-    );
+      </>
+  );
  
 }
 
@@ -111,16 +119,16 @@ const StyledSlider = styled(Slider)`
     }
 `;
 
-const CardInfo = styled.div`
+const SliderInfo = styled.div`
     width: 100%; 
     height: 100%;
 `;
-const CardWrap = styled.div`
+const SliderWrap = styled.div`
     position: relative;
     padding-top: 120%;  
     overflow: hidden; 
 `;
-const CardImg = styled.img`
+const SliderImg = styled.img`
     position: absolute;
     top: 0;
     left: 0;
@@ -131,18 +139,7 @@ const CardImg = styled.img`
     object-fit:cover;
 `;
 
-const CardText = styled.p`
-    padding: 20px;
-    font-size: 20px;
-    font-weight: bolder;
-    text-align: center;
-`;
-const SlideTitle = styled.text`
-    padding: 60px 0px 50px 0px;
-    font-align: center;
-    font-size: 30px;
-    font-weight: bolder;
-`;
+
 
 const DivPre = styled.div`
   width: 100px;
@@ -177,11 +174,11 @@ const ModalContainer = styled.div`
 
 const ModalBackdrop = styled.div`
   // Modal이 떴을 때의 배경을 깔아주는 CSS를 구현
-  z-index: 999; //위치지정 요소
+  z-index: 300; //위치지정 요소
   position: fixed;
   display : flex;
   justify-content : center;
-  align-items : center;
+  align-items : top;
   // background-color: rgba(0,0,0,0.4);
   background-color: rgb(20, 20, 20);
   border-radius: 10px;
@@ -193,30 +190,19 @@ const ModalBackdrop = styled.div`
   height: 100%;
 `;
 
-const ModalBtn = styled.button`
-  background-color: var(--coz-purple-600);
-  text-decoration: none;
-  border: none;
-  padding: 20px;
-  color: white;
-  border-radius: 30px;
-  cursor: grab;
-  width: 100%;
-  height: 100%;
-`;
 
-const ExitBtn = styled(ModalBtn) `
+const ExitBtn = styled.button`
+  position: absolute;
+  z-index: 999;
   background-color : black;
   border-radius: 10px;
   text-decoration: none;
   margin: 10px;
-  width: 50px;
-  height: 50px;
-  display : flex;
-  justify-content : top;
-  align-items : left;
+  width: 80px;
+  height: 80px;
   color: white;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  opacity: 0.5;
 `;
 
 const ModalView = styled.div.attrs((props) => ({
@@ -232,5 +218,35 @@ const ModalView = styled.div.attrs((props) => ({
   heigth: 100%;
 
  `;
+
+ const ModalInfo = styled.div`
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // vertical-align: bottom;
+    // width: 100%; 
+    // height: 100vh;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     vertical-align: middle;
+     width: 100%; 
+     height: 100vh;
+
+`;
+const ModalWrap = styled.div`
+    position: relative;
+    width: 100%; 
+    height: 100%;
+    padding-top: 120%;  
+    overflow: hidden; 
+    background-color: cyan;
+`;
+const ModalImg = styled.img`
+    width: 100%;
+    height: auto;
+    margin-top: 200px;
+`;
 
 export default Slide;
