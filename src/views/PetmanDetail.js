@@ -29,7 +29,7 @@ const PetmanDetail = () => {
             </div>
 
             {/* 상단 이미지 70% */}
-            <Slide content={sliders} /> 
+            <Slide contents={sliders} /> 
 
             {/* 하단 Content 30% */}
             <div class={styles.main__contents}>

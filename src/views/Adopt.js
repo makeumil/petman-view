@@ -14,7 +14,7 @@ const Adopt = () => {
 						<Link to='/'>
 							<img class={styles.header__icon} src='/images/search2.png' alt=''></img>  
 						</Link>	
-						<span class={styles.header__area}>인천시 &gt; 계양구</span>						
+						<span class={styles.header__area}>박촌동</span>						
 					</div>
 					<div class={styles.header__end}> 
                         <Link to='/adopt'>
@@ -55,7 +55,7 @@ const Adopt = () => {
 							<span class={styles.nav__menu}>분양정보</span>  
 						</li>
 					</Link>		
-					<Link to='/'>        
+					<Link to='/map'>        
 						<li> 
 							<img class={styles.nav__icon} src='/images/position2.png'  alt=''/>
 							<span class={styles.nav__menu}>지역정보</span>
@@ -379,7 +379,7 @@ const Adopt = () => {
 						</Link> 
 					</div>	
 					<div class={styles.footer__item}> 
-						<Link to='/'>
+						<Link to='/map'>
 						<img class={styles.footer__icon} src='/images/position2.png'  alt=''/>
 						<p>지역정보</p>
 						</Link> 

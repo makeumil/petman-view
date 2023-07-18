@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from '../css/PetmanList.module.css';
 import '../css/User.css';
 import React, {useState, useEffect} from 'react';
@@ -6,15 +6,17 @@ import React, {useState, useEffect} from 'react';
 
 
 const PetmanList = () => {
+
+	const navigate = useNavigate();
+
 	return (
 		<>
 			<div class={styles.header}>
 				<div class={styles.header__wrapper}>
 					<div class={styles.header__start}>         
-						<Link to='/test'>
-							<img class={styles.header__icon} src='/images/search2.png' alt=''></img>  
-						</Link>	
-						<span class={styles.header__area}>박촌동</span>						
+						<img class={styles.header__img} src='/images/back.png' onClick={()=>{navigate(-1)}}></img>
+						<Link to='/'><img class={styles.header__img} src='/images/home2.png'></img></Link>
+						<div class={styles.header__area}>박촌동</div>				
 					</div>
 					<div class={styles.header__end}> 
 						<Link to='/catalog'>

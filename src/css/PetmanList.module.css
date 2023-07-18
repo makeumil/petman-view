@@ -15,9 +15,16 @@
     height: 140px;
     padding: 0 16px;
 }
-.header__title{
-    font-size: 2em;
-    margin-left: 6px;
+.header__start{
+    display: flex;
+    align-items: center;
+}
+.header__img{
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 .header__area{
     font-size: 2rem;
@@ -269,6 +276,10 @@
 
 
 @media screen and (max-width: 1000px) {
+    .header__img{
+        width: 80px;
+        height: 80px;
+    }
     .header__area{
         font-size: 3.5rem;
     }

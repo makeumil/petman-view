@@ -8,7 +8,7 @@ import { ReactComponent as Prev } from "../svg/left.svg";
 
 function Slide(props) {
 
-  const { content } = props;    
+  const { contents } = props;    
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,7 +45,7 @@ function Slide(props) {
    
       <div className={styles.carousel}>
         <StyledSlider {...settings}>
-          {content.map((image)=>{
+          {contents.map((image)=>{
             return (
                <CardInfo>
                   <CardWrap>
