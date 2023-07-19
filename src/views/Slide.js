@@ -103,14 +103,14 @@ const StyledSlider = styled(Slider)`
         margin: 0 auto;
     }
     .slick-dots{
-        bottom: 100px;
+        bottom: 30px;
         margin-top: 200px;
     }
     .slick-dots li{
-        margin: 15px;
+        margin: 1px;
     }    
     .slick-dots li button:before{
-        font-size: 40px;
+        font-size: 15px;
         color: wheat;
     }
     .slick-slide div {
@@ -142,20 +142,20 @@ const SliderImg = styled.img`
 
 
 const DivPre = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   position: absolute;
-  left: 16px;
+  left: 4px;
   z-index: 99;
   text-align: left;
   line-height: 30px;
 `;
 
 const Div = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   position: absolute;
-  right: 16px;
+  right: 4px;
   z-index: 99;
   text-align: right;
   line-height: 30px;

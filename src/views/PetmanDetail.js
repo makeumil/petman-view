@@ -19,13 +19,13 @@ const PetmanDetail = () => {
             <div class={styles.header}>
                 <div class={styles.header__wrapper}>
                     <div class={styles.header__start}>
-                        <img class={styles.header__back} src='/images/back.png' onClick={()=>{navigate(-1)}}></img>
-                        <Link to='/'><img class={styles.header__home} src='/images/home2.png'></img></Link>
+                        <img class={styles.header__icon} src='/images/back.png' onClick={()=>{navigate(-1)}}></img>
+                        <Link to='/'><img class={styles.header__icon} src='/images/home2.png'></img></Link>
                     </div>
                     <div class={styles.header__end}>
-                        <img class={styles.header__share} src='/images/share.png'></img>
+                        <img class={styles.header__icon} src='/images/share.png'></img>
                     </div>    
-                </div>
+                </div>               
             </div>
 
             {/* 상단 이미지 70% */}
@@ -43,7 +43,7 @@ const PetmanDetail = () => {
                             <span class='user__area'>박촌동</span> 									
                         </div>	
                         <div class='user__pet__box'>
-                            <span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+                            <span class='user__pet'>꽃님이/믹스/여/7개월</span>																
                         </div>
                     </div>
                     <div class={styles.icon__group}>
@@ -58,13 +58,7 @@ const PetmanDetail = () => {
    
                 <div class={styles.main__content__wrap}>
                     <div class={styles.main__content}>
-                        <span>Ad commodo occaecat ullamco voluptate aute labore sint nostrud adipisicing aute. Ut reprehenderit magna nisi cillum enim. Eiusmod tempor in do non sint culpa commodo nostrud anim do aute ipsum sit excepteur. Dolor ex magna sit incididunt sunt consectetur Lorem incididunt pariatur incididunt. Est consequat amet pariatur dolor nulla aute minim excepteur eu veniam magna veniam fugiat velit. Ex nostrud non id dolor in.
-
-Exercitation aliqua ex ipsum enim cillum. Officia magna eu anim pariatur. Sint commodo commodo quis amet ea ut eiusmod dolor fugiat cillum velit anim. Duis elit eu nulla cillum velit officia nostrud.
-
-Minim fugiat ad ex culpa ex. Nostrud eu fugiat enim nulla duis dolor eiusmod nulla sit laboris non. Amet incididunt id sint dolore deserunt. Duis ut tempor quis reprehenderit culpa. Aliqua consectetur aliqua magna nulla mollit quis.
-
-Magna veniam Lorem pariatur officia ad fugiat officia elit.</span>
+                        <span>Ad commodo occaecat ullamco voluptate aute labore sint nostrud adipisicing aute. </span>
                     </div>
                     <div class={styles.main__content__date}>
                         <span>1시간전</span>

@@ -14,8 +14,8 @@ const Notice = () => {
             <div class={styles.header}>
                 <div class={styles.header__wrapper}>
                     <div class={styles.header__start}>
-                        <img class={styles.header__back} src='/images/back.png' onClick={()=>{navigate(-1)}}></img>
-                        <Link to='/'><img class={styles.header__home} src='/images/home2.png'></img></Link>
+                        <img class={styles.header__icon} src='/images/back.png' onClick={()=>{navigate(-1)}}></img>
+                        <Link to='/'><img class={styles.header__icon} src='/images/home2.png'></img></Link>
                     </div>  
                 </div>
             </div>

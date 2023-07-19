@@ -4,7 +4,6 @@
     left: 0;
     width: 100%;
     z-index: 20;
-    color: white;
     background-color: transparent;
 }
 .header__wrapper{
@@ -12,29 +11,39 @@
     align-items: center;
     justify-content: space-between;
     height: 140px;
-    padding: 0 16px;
+    padding: 0 4px;
 }
-.header__back{
-    width: 80px;
-    height: 80px;
+.header__start{
+    display: flex;
+    align-items: center;
+}
+.header__icon{
+    width: 60px;
+    height: 60px;
     border: none;
     background-color: transparent;
-    cursor: pointer;
+    margin: 0px 4px;
 }
-.header__back:hover{
-    cursor: pointer;
-}
-.header__home{
-    width: 80px;
-    height: 80px;
+.header__icon__notice{
+    position: absolute;
+    width: 60px;
+    height: 60px;
     border: none;
     background-color: transparent;
+    margin-right: 5px;
 }
-.header__share{
-    width: 80px;
-    height: 80px;
-    border: none;
-    background-color: transparent;
+.header__start{
+    width: 100%;
+}
+.header__end{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+}
+.header__notice__group{
+    position: relative;
+    width: 100%;
+    margin-right: 5px;
 }
 .header__left{
     left : 0;
@@ -67,6 +76,7 @@
     width: 100%;
     margin-bottom: 200px;
     background-color: transparent;
+    padding: 10px;    
 }
 .main__content__wrap{
     width: 100%;
@@ -101,22 +111,22 @@
 }
 .main__content__reaction{
     width: 100%;
-    box-shadow: 0 0 3px gray;
     z-index: 20;
     color: white;
+    box-shadow: 0 0 3px gray;
 }
 .icon__group{
-    position: absolute;
+    display: flex;
+    justify-content: right;
     width: 100%;
-    height: 100px;
-    text-align: right;
+    height: 100%;
     vertical-align: middle;
-    padding: 10px 30px 10px 10px;
+    align-items: center;
 }
 .icon__image{
     width: 60px;
     height: 60px;
-    margin-left: 30px;
+    margin: 0px 30px 0px 30px;
 }
 
 .footer{
@@ -132,6 +142,7 @@
 .footer form{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     border: 0;
@@ -139,46 +150,92 @@
     vertical-align: middle;
     padding: 40px 20px 40px 20px;
 }
-input[type=text]{
+.footer input[type=text]{
 	position: flex;
     width: calc(100% - 170px);
     height: 120px;
     border: 1px solid;
-	border-radius: 15px;
-	background-color: gray;
+	border-radius: 5px;
+	background-color: rgb(70, 70, 70);
 	display: inline-block;
     font-size: 3rem;
+    border: 2px solid wheat;
 
 }
-input[type=text]::placeholder{
+.footer input[type=text]::placeholder{
 	color: rgb(118, 118, 118);
 	font-size: 3rem;
     text-align: center;
 }
-input[type=image]{  
+.footer input[type=image]{  
     width: 120px;
     height: 120px;
     margin-left: 20px;
 }
 
 @media screen and (max-width: 1000px) {
+    .header__wrapper{
+        height: 60px;
+        padding: 0 5px;
+    }
+    .header__notice__group{
+        margin-right: 5px;
+    }
+    .main__content{
+        padding: 10px;
+        word-break: break-all;
+    }
     .main__content span{
-        font-size: 3.5rem;
+        font-size: 1.5rem;
     }
     .main__content__date{
-        font-size:  2.5rem;
+        padding: 10px;
+        font-size: 0.8rem;
     }
     .main__image{
         max-width: 100%;
     }
     .icon__image{
-        width: 80px;
-        height: 80px;
+        width: 30px;
+        height: 30px;
+        margin: 0px 10px 0px 10px;
     }
     .footer__reply{
         width: calc(100% - 120px);
     }    
     .main__content__good span{
-        font-size: 2.5rem;
+        font-size: 1rem;
+    }
+    .header__icon{
+        width: 30px;
+        height: 30px;    
+    }
+    .footer{        
+        height: 60px;
+    }
+    .footer form{      
+        padding: 10px 5px 10px 5px;
+    }
+    .footer input[type=text]{
+        width: calc(100% - 70px);
+        height: 40px;
+        font-size: 1rem;
+    }
+    .footer input[type=text]::placeholder{
+        color: rgb(118, 118, 118);
+        font-size: 1rem;
+        text-align: center;
+    }
+    .footer input[type=image]{  
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+    .main__content__good img{
+        width: 30px;
+        height: 30px;
+    }
+    .main__content__wrap{
+        padding-bottom: 5px;
     }
 }    

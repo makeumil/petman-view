@@ -20,13 +20,8 @@ const Main = () => {
 						<Link to='/catalog'>
 							<img class={styles.header__icon} src='/images/menu.png' alt=''></img>
 						</Link>	
-						<Link to='/notice'>		
-						<div class={styles.header__notice__group}>												
-							<img class={styles.header__icon__notice} src='/images/alarm2.png' alt=''></img>
-							<div class={styles.header__notice__alarm}>
-								<span>&#x2022;</span>
-							</div>
-						</div>
+						<Link to='/notice'>													
+							<img class={styles.header__icon} src='/images/alarm2.png' alt=''></img>
 						</Link>
 					</div>
 				</div>	
@@ -83,7 +78,7 @@ const Main = () => {
 									<span class='user__area'>박촌동</span> 									
 								</div>	
 								<div class={styles.thumbs__profile__title}>
-									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+									<span class='user__pet'>꽃님이/믹스/여/7개월</span>																
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
@@ -114,7 +109,7 @@ const Main = () => {
 									<span class='user__area'>가양동</span> 									
 								</div>	
 								<div class={styles.thumbs__profile__title}>
-									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+									<span class='user__pet'>꽃님이/믹스/여/7개월</span>																
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
@@ -143,7 +138,7 @@ const Main = () => {
 									<span class='user__area'>계산동</span> 									
 								</div>	
 								<div class={styles.thumbs__profile__title}>
-									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+									<span class='user__pet'>꽃님이/믹스/여/7개월</span>																
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
@@ -172,7 +167,7 @@ const Main = () => {
 									<span class='user__area'>귤현동</span> 									
 								</div>	
 								<div class={styles.thumbs__profile__title}>
-									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+									<span class='user__pet'>꽃님이/믹스/여/7개월</span>																
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
@@ -201,7 +196,7 @@ const Main = () => {
 									<span class='user__area'>동양동</span> 									
 								</div>	
 								<div class={styles.thumbs__profile__title}>
-									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+									<span class='user__pet'>꽃님이/믹스/여/7개월</span>																
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
@@ -230,7 +225,7 @@ const Main = () => {
 									<span class='user__area'>공항동</span> 									
 								</div>	
 								<div class={styles.thumbs__profile__title}>
-									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+									<span class='user__pet'>꽃님이/믹스/여/7개월</span>																
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
@@ -259,7 +254,7 @@ const Main = () => {
 									<span class='user__area'>서초동</span> 									
 								</div>	
 								<div class={styles.thumbs__profile__title}>
-									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+									<span class='user__pet'>꽃님이/믹스/여/7개월</span>																
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
@@ -317,7 +312,7 @@ const Main = () => {
 									<span class='user__area'>고강동</span> 									
 								</div>	
 								<div class={styles.thumbs__profile__title}>
-									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+									<span class='user__pet'>꽃님이/믹스/여/7개월</span>																
 								</div>	
 							</div>	
 							<div class={styles.thumbs__text}> 
@@ -346,7 +341,7 @@ const Main = () => {
 									<span class='user__area'>박촌동</span> 									
 								</div>	
 								<div class={styles.thumbs__profile__title}>
-									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+									<span class='user__pet'>꽃님이/믹스/여/7개월</span>																
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
@@ -375,7 +370,7 @@ const Main = () => {
 									<span class='user__area'>박촌동</span> 									
 								</div>	
 								<div class={styles.thumbs__profile__title}>
-									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+									<span class='user__pet'>꽃님이/믹스/여/7개월</span>																
 								</div>	
 							</div>	
 							<div class={styles.thumbs__text}> 
@@ -404,7 +399,7 @@ const Main = () => {
 									<span class='user__area'>박촌동</span> 									
 								</div>	
 								<div class={styles.thumbs__profile__title}>
-									<span class='user__pet'>꽃님이 / 믹스 / 여 / 7개월</span>																
+									<span class='user__pet'>꽃님이/믹스/여/7개월</span>																
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
@@ -430,7 +425,7 @@ const Main = () => {
 				<div class={styles.footer__contents}>     
 					<div class={styles.footer__item}>
 						<Link to='/'>
-						<img class={styles.footer__contents__image} src='/images/home2.png'  alt=''/>  
+						<img class={styles.footer__icon} src='/images/home2.png'  alt=''/>  
 						<p>홈</p>
 						</Link> 
 					</div>	

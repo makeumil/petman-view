@@ -14,22 +14,17 @@ const PetmanList = () => {
 			<div class={styles.header}>
 				<div class={styles.header__wrapper}>
 					<div class={styles.header__start}>         
-						<img class={styles.header__img} src='/images/back.png' onClick={()=>{navigate(-1)}}></img>
-						<Link to='/'><img class={styles.header__img} src='/images/home2.png'></img></Link>
+						<img class={styles.header__icon} src='/images/back.png' onClick={()=>{navigate(-1)}}></img>
+						<Link to='/'><img class={styles.header__icon} src='/images/home2.png'></img></Link>
 						<div class={styles.header__area}>박촌동</div>				
 					</div>
 					<div class={styles.header__end}> 
 						<Link to='/catalog'>
 							<img class={styles.header__icon} src='/images/menu.png' alt=''></img>
 						</Link>	
-						<Link to='/notice'>		
-						<div class={styles.header__notice__group}>												
-							<img class={styles.header__icon__notice} src='/images/alarm2.png' alt=''></img>
-							<div class={styles.header__notice__alarm}>
-								<span>&#x2022;</span>
-							</div>
-						</div>
-						</Link>
+						<Link to='/notice'>	
+							<img class={styles.header__icon} src='/images/alarm2.png' alt=''></img>
+					    </Link>
 					</div>
 				</div>	
 			</div>

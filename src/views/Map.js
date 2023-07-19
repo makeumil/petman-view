@@ -28,13 +28,13 @@ const Kakao = () => {
 
     var pin = '/images/marker-blue.png';
     if (selectValue==='동물병원') {
-        pin = '/images/marker-blue.png';
+        pin = '/images/marker-red.png';
     }
     if (selectValue==='애견미용실') {
         pin = '/images/marker-pink.png';
     }
     if (selectValue==='애견카페') {
-        pin = '/images/marker-red.png';
+        pin = '/images/marker-blue.png';
     }
 
 
@@ -107,7 +107,7 @@ const Kakao = () => {
                   width: "100%",
                   height: "100%",
               }}
-              level={1}
+              level={3}
               onCreate={setMap}
               >
               {markers.map((marker) => (
@@ -118,8 +118,8 @@ const Kakao = () => {
                         // src: "/images/marker-blue.png", 
                         src: pin,
                         size: {
-                          width: 80,
-                          height: 85,
+                          width: 30,
+                          height: 35,
                         }, 
                         options: {
                           offset: {
@@ -133,7 +133,8 @@ const Kakao = () => {
                       >
                      {info &&info.content === marker.content && (
                  
-                          <div style={{color:"#000"}}>{marker.content}</div>
+                          // <div style={{color:"#000" }}>{marker.content}</div>
+                          <div class={styles.infowindow}>{marker.content}</div>
                     
                           // <div class={styles.info}>                        
                           //   <img style={{ width: "30px", height: "30px"}} src='/images/footprint-red.png' />

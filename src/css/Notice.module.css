@@ -14,25 +14,15 @@
     height: 140px;
     padding: 0 16px;
 }
-.header__back{
+.header__icon{
     width: 80px;
     height: 80px;
     border: none;
     background-color: transparent;
     cursor: pointer;
-}
-.header__back:hover{
-    cursor: pointer;
-}
-.header__home{
-    width: 80px;
-    height: 80px;
-    border: none;
-    background-color: transparent;
 }
 .notice__content__wrap{
     display: flex;
-    justify-content: b;
     flex-wrap: wrap;
     width: 100%;
     margin: 140px 0px 0px 0px;
@@ -70,10 +60,33 @@
     font-size: 1.2rem;
 }
 @media screen and (max-width: 1000px) {
+    .header__wrapper{
+        height: 60px;
+    }
+    .header__icon{
+        width: 30px;
+        height: 30px;
+    }
+    .notice__content__wrap{
+        margin: 60px 0px 0px 0px;
+    }
     .notice__content span{
-        font-size: 3.5rem;
+        font-size: 1.5rem;
     }
     .notice__date span{
-        font-size: 2rem;
+        font-size: 0.8rem;
+    }
+    .notice__bullet{
+        width: 10px;
+        padding-top: 10px;
+        margin-left: 5px;
+    }
+    .notice{
+        margin-left: 10px;
+        padding: 10px;
+    }
+    .notice__date{
+        margin-left: 10px;    
+        padding: 10px;
     }
 }    
