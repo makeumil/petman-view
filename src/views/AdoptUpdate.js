@@ -16,8 +16,8 @@ const AdoptUpdate = () => {
             <div class={styles.header}>
                 <div class={styles.header__wrapper}>
                     <div class={styles.header__start}>
-                        <img class={styles.header__back} src='/images/back.png' onClick={()=>{navigate(-1)}}></img>
-                        <Link to='/'><img class={styles.header__home} src='/images/home2.png'></img></Link>
+                        <img class={styles.header__icon} src='/images/back.png' onClick={()=>{navigate(-1)}}></img>
+                        <Link to='/'><img class={styles.header__icon} src='/images/home2.png'></img></Link>
                     </div>  
                 </div>
             </div>
@@ -61,10 +61,10 @@ const AdoptUpdate = () => {
                                 <tr>
                                     <td><span>&#x2022;</span></td>
                                     <td>성별</td>
-                                    <td><fieldseet>
-                                        <label><input type="radio" name="gender" value="0"/><span>남</span></label>
-                                        <label><input type="radio" name="gender" value="1"/><span>여</span></label>
-                                        </fieldseet>
+                                    <td><fieldset>
+                                        <input type="radio" name="gender" value="0"/><label htmlFor='gender'>남</label>
+                                        <input type="radio" name="gender" value="1"/><label htmlFor='gender'>여</label>
+                                        </fieldset>
                                     </td>
                                     {/* <td><input type="radio" name="gender" value="0"/><label htmlFor='gender'>남</label>
                                         <input type="radio" name="gender" value="1"/><label htmlFor='gender'>여</label> </td> */}
