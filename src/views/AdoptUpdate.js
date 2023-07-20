@@ -62,8 +62,8 @@ const AdoptUpdate = () => {
                                     <td><span>&#x2022;</span></td>
                                     <td>성별</td>
                                     <td><fieldset>
-                                        <input type="radio" name="gender" value="0"/><label htmlFor='gender'>남</label>
-                                        <input type="radio" name="gender" value="1"/><label htmlFor='gender'>여</label>
+                                        <label><input type="radio" name="gender" value="0"/>남</label>
+                                        <label><input type="radio" name="gender" value="1"/>여</label>
                                         </fieldset>
                                     </td>
                                     {/* <td><input type="radio" name="gender" value="0"/><label htmlFor='gender'>남</label>

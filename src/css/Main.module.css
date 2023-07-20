@@ -35,6 +35,7 @@
     border: none;
     background-color: transparent;
     margin: 0px 5px;
+    cursor: pointer;
 }
 .header__icon__notice{
     position: absolute;
@@ -230,7 +231,7 @@
         padding: 0 4px;
     }
     .header__area{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .header__icon, .header__notice__alarm{
         width: 30px;

@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import styles from '../css/Map.module.css';
 import '../css/User.css';
 import React, {useState, useEffect} from 'react';
-import { Map, MapMarker  } from 'react-kakao-maps-sdk';
+import { Map, MapMarker, CustomOverlayMap } from 'react-kakao-maps-sdk';
 
 
 const Kakao = () => {
@@ -19,6 +19,7 @@ const Kakao = () => {
     const area = '계양구';
     const selectList = ["동물병원", "애견미용실", "애견카페"];
     const [selectValue, setSelectValue] = useState(selectList[0]);
+    const [isOpen, setIsOpen] = useState(false)
 
     const handleSubmit = (e) => {
       setSelectValue(e.target.value);
@@ -37,7 +38,7 @@ const Kakao = () => {
         pin = '/images/marker-blue.png';
     }
 
-
+   
     useEffect(() => {
         if (!map) return
         const ps = new kakao.maps.services.Places();            
@@ -78,11 +79,11 @@ const Kakao = () => {
         {/* fix Header - 뒤로가기/홈, 공유 */}
         <div class={styles.header}>
             <div class={styles.header__wrapper}>
-                <div class={styles.header__start}>
-                    <img class={styles.header__img} src='/images/back.png' onClick={()=>{navigate(-1)}}></img>
-                    <Link to='/'><img class={styles.header__img} src='/images/home2.png'></img></Link>
-                    <div class={styles.header__area}>박촌동</div>
-                </div>
+              <div class={styles.header__start}>         
+                <img class={styles.header__icon} src='/images/back.png' onClick={()=>{navigate(-1)}}></img>
+                <Link to='/'><img class={styles.header__icon} src='/images/home2.png'></img></Link>
+                <span class={styles.header__area}>박촌동</span>				
+              </div>
                 <div class={styles.header__end}>
                     <form>
                       <select class={styles.sel} onChange={handleSubmit}>
@@ -128,21 +129,25 @@ const Kakao = () => {
                           },
                         },
                       }}
-                      onClick={() => setInfo(marker)}
-
+                      onClick={ () => { setInfo(marker); setIsOpen(true);} }
                       >
-                     {info &&info.content === marker.content && (
-                 
-                          // <div style={{color:"#000" }}>{marker.content}</div>
-                          <div class={styles.infowindow}>{marker.content}</div>
-                    
-                          // <div class={styles.info}>                        
-                          //   <img style={{ width: "30px", height: "30px"}} src='/images/footprint-red.png' />
-                          //   {marker.content}<br />
-                          //   {marker.address}<br />
-                          //   {marker.phone}<br />
-                          // </div>
+                     {info &&info.content === marker.content &&isOpen && (                 
+                          <CustomOverlayMap 
+                              position={ marker.position } 
+                              zIndex={999}
+                              xAnchor={0.8}
+                              yAnchor={2.8}                              
+                          >
+                            <div class={styles.infowindow}>&#x2022; {marker.content}
+                                <div
+                                  className={styles.close}
+                                  onClick={() => { setIsOpen(false); setInfo(initInfo); } }
+                                  title="닫기"
+                                >X</div>
+                            </div>
+                          </CustomOverlayMap>
                       )} 
+
                       </MapMarker>
                   ))}
           </Map>

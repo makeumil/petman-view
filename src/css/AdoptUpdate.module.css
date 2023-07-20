@@ -93,6 +93,7 @@ textarea{
     border: solid 2px #1E90FF;
 }
 label {
+    display: flex;
     font-size: 2rem;
     color: white;
     text-align: center;
@@ -109,6 +110,13 @@ label {
     vertical-align: middle;
     padding: 20px;
     margin-left: 60px;
+}
+[type="radio"]:checked {
+    border: 0.6em solid tomato;
+}
+[type="radio"]:hover {
+    box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+    cursor: pointer;
 }
 input::placeholder{
 	color: rgb(118, 118, 118);

@@ -146,7 +146,7 @@ const DivPre = styled.div`
   height: 50px;
   position: absolute;
   left: 4px;
-  z-index: 99;
+  z-index: 10;
   text-align: left;
   line-height: 30px;
 `;
@@ -156,7 +156,7 @@ const Div = styled.div`
   height: 50px;
   position: absolute;
   right: 4px;
-  z-index: 99;
+  z-index: 10;
   text-align: right;
   line-height: 30px;
   opacity: 0.8;

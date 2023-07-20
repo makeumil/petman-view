@@ -19,10 +19,6 @@
     display: flex;
     align-items: center;
 }
-.header__title{
-    font-size: 2em;
-    margin-left: 4px;
-}
 .header__area{
     font-size: 2rem;
     margin-left: 4px;
@@ -35,6 +31,7 @@
     border: none;
     background-color: transparent;
     margin: 0px 5px;
+    cursor: pointer;
 }
 .header__icon__notice{
     position: absolute;
@@ -199,7 +196,7 @@
         padding: 0 4px;
     }
     .header__area{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .header__icon, .header__notice__alarm{
         width: 30px;
@@ -207,9 +204,6 @@
     }
     .header__notice__group{
         margin-right: 5px;
-    }
-    .header__notice__alarm span{
-        font-size: 1.5rem;
     }
     .thumbs__wrapper{
         margin: 60px 0 60px 0;

@@ -61,9 +61,10 @@ const AdoptReg = () => {
                                 <tr>
                                     <td><span>&#x2022;</span></td>
                                     <td>성별</td>
-                                    <td>
-                                        <input type="radio" name="gender" value="0"/><label htmlFor='gender'>남</label>
-                                        <input type="radio" name="gender" value="1"/><label htmlFor='gender'>여</label>
+                                    <td><fieldset>
+                                        <label><input type="radio" name="gender" value="0"/>남</label>
+                                        <label><input type="radio" name="gender" value="1"/>여</label>
+                                        </fieldset>
                                     </td>
                                     {/* <td><input type="radio" name="gender" value="0"/><label htmlFor='gender'>남</label>
                                         <input type="radio" name="gender" value="1"/><label htmlFor='gender'>여</label> </td> */}
