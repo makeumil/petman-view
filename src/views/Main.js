@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import styles from '../css/Main.module.css';
 import '../css/User.css';
 import React, {useState, useEffect} from 'react';
-
-
+import FooterMenu from './FooterMenu';
+import Nav from './Nav';
 
 const Main = () => {
 	return (
@@ -27,40 +27,7 @@ const Main = () => {
 				</div>	
 			</div>
 
-			<nav class={styles.nav}>
-				<ul class={styles.nav__wrapper}> 
-					<Link to='/'>     
-						<li> 
-							<img class={styles.nav__icon} src='/images/home2.png' alt=''/>   
-							<span class={styles.nav__menu}>홈</span>
-						</li>
-					</Link>		
-					<Link to='/petman/list'>     
-						<li> 
-							<img class={styles.nav__icon} src='/images/vlog2.png'  alt=''/>   
-							<span class={styles.nav__menu}>펫매니저</span>
-						</li>
-					</Link>		
-					<Link to='/adopt'>    
-						<li> 
-							<img class={styles.nav__icon} src='/images/parcel2.png'  alt=''/>
-							<span class={styles.nav__menu}>분양정보</span>  
-						</li>
-					</Link>		
-					<Link to='/map'>        
-						<li> 
-							<img class={styles.nav__icon} src='/images/position2.png'  alt=''/>
-							<span class={styles.nav__menu}>지역정보</span>
-						</li>
-					</Link>	
-					<Link to='/'>    
-						<li>
-							<img class={styles.nav__icon} src='/images/user2.png'  alt=''/>    
-							<span class={styles.nav__menu}>내정보</span>
-						</li>
-					</Link>		
-				</ul>			
-			</nav> 
+            <Nav />   
 
 			<section class={styles.thumbs}> 
 				<div class={styles.thumbs__wrapper}> 
@@ -421,63 +388,11 @@ const Main = () => {
 
             {/* <Floting_Btn/> */}
 
-			<div class={styles.footer}>
-				<div class={styles.footer__contents}>     
-					<div class={styles.footer__item}>
-						<Link to='/'>
-						<img class={styles.footer__icon} src='/images/home2.png'  alt=''/>  
-						<p>홈</p>
-						</Link> 
-					</div>	
-					<div class={styles.footer__item}>
-						<Link to='/petman/list'>   
-						<img class={styles.footer__icon} src='/images/vlog2.png'  alt=''/>  
-						<p>펫매니저</p>
-						</Link> 
-					</div>
-					<div class={styles.footer__item}>  
-						<Link to='/adopt'>
-						<img class={styles.footer__icon} src='/images/parcel2.png'  alt=''/>
-						<p>분양정보</p>
-						</Link> 
-					</div>	
-					<div class={styles.footer__item}> 
-						<Link to='/map'>
-						<img class={styles.footer__icon} src='/images/position2.png'  alt=''/>
-						<p>지역정보</p>
-						</Link> 
-					</div>
-					<div class={styles.footer__item}>
-						<Link to='/'>
-						<img class={styles.footer__icon} src='/images/user2.png'  alt=''/>   
-						<p>사용자</p>
-						</Link> 
-					</div>		
-				</div>	
-			</div>		
+	        <FooterMenu />
 
 		</>
 	);
 };
 
-
-function Floting_Btn() {
-	const [scrollPosition, setScrollPosition] = useState(0);
-	const updateScroll = () => {
-		setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-	}
-	useEffect(()=>{
-		window.addEventListener('scroll', updateScroll);
-	});
-	return (
-		<div class={styles.floating__button}> 
-			<span class={styles.move__board}> 
-				<Link to='/'>    
-					<img src='/images/write.png'  alt=''/>  
-				</Link> 	
-			</span>
-		</div> 
-	);
-};
 
 export default Main;

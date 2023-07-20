@@ -18,6 +18,8 @@
 .header__start{
     display: flex;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 .header__img{
     width: 60px;
@@ -37,16 +39,43 @@
 }
 .header__end {
     display: flex;
+    width: 100%;
+    height: 100%;
     align-items: center;
+    justify-content: right;
 }
-.header__end select{
+.header__end form{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: right;
+}
+.sel{
     width: 300px;
     height: 60px;
-    font-size: 1.5rem;
-    border: 1px solid gray;
-    border-radius: 5px; 
+    padding: 10px;
+    font-size: 1.5rem;     
     background-color: rgb(20, 20, 20);
     color: white;
+    border: 1px solid #9B51E0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: 3px solid #F8E4FF;
+    border-radius: 10px;
+    appearance: none;
+    background: url(./img/down.png) 95% no-repeat; 
+    background-size: 30px 30px;
+}
+.header__end select:focus{
+    border: 1px solid rgb(122, 245, 245);
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: 3px solid #F8E4FF;
+    border-radius: 10px;
+}
+.header__end select option{
+    background-color: rgb(20, 20, 20);
 }
 .map{
     width: 100vw;
@@ -100,7 +129,7 @@
         font-size: 1.5rem;
     }    
     .header__end select{
-        width: 100px;
+        width: 200px;
         height: 40px;
         font-size: 1rem;
     }

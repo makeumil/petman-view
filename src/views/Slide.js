@@ -198,10 +198,10 @@ const ExitBtn = styled.button`
   border-radius: 10px;
   text-decoration: none;
   margin: 10px;
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   color: white;
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   opacity: 0.5;
 `;
 
@@ -213,7 +213,7 @@ const ModalView = styled.div.attrs((props) => ({
   align-items: left;
   vertical-align: top;
   flex-direction: column;
-  border-radius: 20px;
+  // border-radius: 20px;
   width: 100%;
   heigth: 100%;
 
@@ -246,7 +246,7 @@ const ModalWrap = styled.div`
 const ModalImg = styled.img`
     width: 100%;
     height: auto;
-    margin-top: 200px;
+    margin-top: 30%;
 `;
 
 export default Slide;

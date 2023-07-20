@@ -85,7 +85,7 @@ const Kakao = () => {
                 </div>
                 <div class={styles.header__end}>
                     <form>
-                      <select  onChange={handleSubmit}>
+                      <select class={styles.sel} onChange={handleSubmit}>
                         {selectList.map((item) => (
                             <option value={item} key={item}>
                             {item}

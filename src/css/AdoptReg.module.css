@@ -2,9 +2,11 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;   
+    width: 100%;
+    box-shadow: 0 0 3px gray;
+    z-index: 20;
     color: white;
-    background-color: black;
+    background-color: rgb(20, 20, 20);
 }
 .header__wrapper{
     display: flex;
@@ -13,37 +15,35 @@
     height: 140px;
     padding: 0 16px;
 }
-.header__back{
-    width: 80px;
-    height: 80px;
+.header__start{
+    display: flex;
+    align-items: center;
+}
+.header__title{
+    font-size: 2em;
+    margin-left: 4px;
+}
+.header__area{
+    font-size: 2rem;
+    margin-left: 4px;
+    vertical-align: top;
+    text-decoration-line: none;
+}
+.header__icon{
+    width: 60px;
+    height: 60px;
     border: none;
     background-color: transparent;
-    cursor: pointer;
+    margin: 0px 5px;
 }
-.header__back:hover{
-    cursor: pointer;
-}
-.header__home{
-    width: 80px;
-    height: 80px;
+.header__icon__notice{
+    position: absolute;
+    width: 60px;
+    height: 60px;
     border: none;
     background-color: transparent;
+    margin-right: 100px;
 }
-.header__share{
-    width: 80px;
-    height: 80px;
-    border: none;
-    background-color: transparent;
-}
-.header__left{
-    left : 0;
-    height: 40px;
-}
-.header__right{
-    right: 0;
-    height: 40px;
-}
-
 .picture{
     display: flex;
     align-items: center;
@@ -69,7 +69,6 @@
     font-size: 2rem;
     color: lightgray;
 }
-
 input[type=text]{
     color: whitesmoke;
     font-size: 2rem;
@@ -93,8 +92,6 @@ textarea{
     box-sizing: border-box;
     border: solid 2px #1E90FF;
 }
-
-
 label {
     font-size: 2rem;
     color: white;
@@ -102,59 +99,22 @@ label {
     vertical-align: middle;
     line-height: 2rem;
     padding: 0rem 2rem;
-  }
-[type="radio"], span {
-    vertical-align: middle;
-  }
-  
-  [type="radio"] {
+}
+[type="radio"] {
     appearance: none;
     border: max(2px, 0.1em) solid #1E90FF;
     border-radius: 50%;
-    width: 3em;
-    height: 3em;
-    /* transition: border 0.5s ease-in-out; */
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
     padding: 20px;
-  }
-  
-  [type="radio"]:checked {
-    border: 0.6em solid tomato;
-  }
-  
-  /* [type="radio"]:focus-visible {
-    outline-offset: max(2px, 0.1em);
-    outline: max(2px, 0.1em) dotted tomato;
-  }
-  
-  [type="radio"]:hover {
-    box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
-    cursor: pointer;
-  }
-  
-  [type="radio"]:hover + span {
-    cursor: pointer;
-  }
-  
-  [type="radio"]:disabled {
-    background-color: lightgray;
-    box-shadow: none;
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
-  
-  [type="radio"]:disabled + span {
-    opacity: 0.7;
-    cursor: not-allowed;
-  } */
-
-  
-
+    margin-left: 60px;
+}
 input::placeholder{
 	color: rgb(118, 118, 118);
 	font-size: 3rem;
     text-align: center;
 }
-
 .main__contents{
     width: 100%;
     margin: 140px 0px 120px 0px;
@@ -174,7 +134,6 @@ input::placeholder{
     color: white;
     vertical-align: middle;
 }
-
 .main__content tr{
     height: 150px;    
 }
@@ -190,11 +149,6 @@ input::placeholder{
     padding: 30px;
     color: gray;
 }
-.main__content span{
-    color: wheat;
-}
-
-
 .icon__group{
     position: absolute;
     width: 100%;
@@ -208,7 +162,6 @@ input::placeholder{
     height: 60px;
     margin-left: 30px;
 }
-
 .form__submit{
     position: fixed; 
     align-items: center;
@@ -224,24 +177,108 @@ input::placeholder{
     background-color: rgb(255, 51, 0);
     z-index: 999;
 }
+
 @media screen and (max-width: 1000px) {
-    .main__content table{
-        font-size: 3.5rem;
+    .picture{
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        justify-content: center;
+        width: 120px;
+        height: 100px;
+        border: 1px solid gray;
+        border-radius: 5%;
+        background-color: transparent;
+        margin: 90px 0px 0px 10px;
     }
-    .main__content__date{
-        font-size: 2.5rem;
+    .picture img{
+        width: 80px;
+    }
+    .picture__text{
+        width: 120px;
+        height: 30px;
+        text-align: center;
+        margin: 10px 0px 0px 10px;
+    }
+    .picture__text span{
+        font-size: 1rem;
+        color: lightgray;
+    }
+    .header__wrapper{
+        height: 60px;
+        padding: 0 4px;
+    }
+    .header__area{
+        font-size: 1.5rem;
+    }
+    .header__icon, .header__notice__alarm{
+        width: 30px;
+        height: 30px;    
+    }
+    .header__notice__group{
+        margin-right: 5px;
+    }
+    .header__notice__alarm span{
+        font-size: 1.5rem;
     }
     .main__image{
         max-width: 100%;
     }
     .icon__image{
-        width: 80px;
-        height: 80px;
+        width: 30px;
+        height: 30px;
     }   
-    .picture__text span{
-        font-size: 3rem;
-    }    
     input[type=text], input[type=textarea], label, textarea{
-        font-size: 3.5rem;
+        font-size: 1rem;
+    }
+    .main__contents{
+        margin: 30px 0px 60px 0px;
+    }
+    .main__content{
+        padding: 5px;
+    }
+    .main__content table{
+        font-size: 1rem;
+    }
+    .main__content tr{
+        height: 30px;    
+    }
+    .main__content td{
+        padding-right: 5px;
+    }
+    .main__content td{
+        border-bottom: 1px dotted gray;
+        vertical-align: middle;
+        padding-right: 10px;
+    }
+    .form__submit{       
+        height: 60px;    
+        font-size: 1.5rem;    
+    }
+    input[type=text]{
+        font-size: 1rem;      
+        height: 30px;
+        padding: 5px;       
+        margin: 10px;      
+        border: solid 1px #1E90FF;
+    }
+    textarea{
+        font-size: 1rem;       
+        height: 60px;
+        padding: 5px;       
+        margin: 10px;       
+        border: solid 1px #1E90FF;
+    }
+    input::placeholder{
+        font-size: 1rem;
+    }      
+    [type="radio"] {
+        appearance: none;
+        border: max(2px, 0.1em) solid #1E90FF;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        vertical-align: middle;
+        padding: 10px;
     }
 }    

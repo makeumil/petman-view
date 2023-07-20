@@ -20,11 +20,11 @@ const AdoptDetail = () => {
             <div class={styles.header}>
                 <div class={styles.header__wrapper}>
                     <div class={styles.header__start}>
-                        <img class={styles.header__back} src='/images/back.png' onClick={()=>{navigate(-1)}}></img>
-                        <Link to='/'><img class={styles.header__home} src='/images/home2.png'></img></Link>
+                        <img class={styles.header__icon} src='/images/back.png' onClick={()=>{navigate(-1)}}></img>
+                        <Link to='/'><img class={styles.header__icon} src='/images/home2.png'></img></Link>
                     </div>
                     <div class={styles.header__end}>
-                        <img class={styles.header__share} src='/images/share.png'></img>
+                        <img class={styles.header__icon} src='/images/share.png'></img>
                     </div>    
                 </div>
             </div>
@@ -124,9 +124,9 @@ const AdoptDetail = () => {
                     </div>
                     <div class={styles.main__content__date}>
                         <span>1시간전</span>
-                        <div class={styles.main__content__good}>
+                        <div>
                             <Link to='/adopt/detail'>
-                                <img src='/images/pin.png'  alt=''/>
+                                <img class={styles.icon__image} src='/images/pin.png'  alt=''/>
                             </Link>
                         </div>
                     </div>                    
