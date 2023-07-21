@@ -16,6 +16,10 @@ const Kakao = () => {
     const [markers, setMarkers] = useState([]);
     const [map, setMap] = useState();
     const [area, setArea] = useState('계양구');
+    const [coord, setCoord] = useState({
+      lat: 37.5538245,
+      lng: 126.7456244,
+    });
 
     const selectList = ["동물병원", "애견미용실", "애견카페", '애견분양'];
     const [category, setCategory] = useState(selectList[0]);
@@ -40,30 +44,33 @@ const Kakao = () => {
         pin = '/images/marker-blue.png';
     }
     if (category==='애견분양') {
-      pin = '/images/marker-blue.png';
-  }
-   
-  const getAddr = (coords) => {
-    const geocoder = new kakao.maps.services.Geocoder(); 
-    let callback = function(result, status) {
-      if (status === kakao.maps.services.Status.OK) {
-          const arr  ={ ...result};
-          const _arr = arr[0].region_2depth_name;
-          console.log('****** ' + _arr);
-          setArea(_arr);
-      }
-  }
-    const result = geocoder.coord2RegionCode(coords.getLng(), coords.getLat(), callback); 
-  };
+      pin = '/images/marker-orange.png';
+    }
+
+  // const getAddr = (coords) => {
+  //   const geocoder = new kakao.maps.services.Geocoder(); 
+  //   let callback = function(result, status) {
+  //     if (status === kakao.maps.services.Status.OK) {
+  //         const arr  ={ ...result};
+  //         const _arr = arr[0].region_2depth_name;
+  //         console.log('****** ' + _arr);
+  //         setArea(_arr);
+  //     }
+  // }
+    // const result = geocoder.coord2RegionCode(coords.getLng(), coords.getLat(), callback); 
+
 
 
     useEffect(() => {    
-        if (!map || !category || !area) return;
+        if (!map || !category) return;
         const ps = new kakao.maps.services.Places();            
-        const keyword = area + ' ' + category;          
-        console.log('>>>>>>> ' + keyword);
+        const keyword = area + ' ' + category;   
+        console.log('coord : ' + coord.lat + ' ' + coord.lng);   
         // var options = {
-        //   location: currentCoordinate,
+        //   location: {
+        //     lat: 37.5538245,
+        //     lng: 126.7456244,
+        //   },
         //   radius: 10000,
         //   sort: kakao.maps.services.SortBy.DISTANCE,
         // };
@@ -76,11 +83,6 @@ const Kakao = () => {
             let markers = [];
     
             for (var i = 0; i < data.length; i++) {
-              console.log('>>>>>>>>>>>>>>>>> ' + data[i].category_group_name
-                + ' ' + data[i].category_name
-                + ' ' + data[i].distance
-                + ' ' + data[i].road_address_name
-              );
               // @ts-ignore
               markers.push({
                 position: {
@@ -99,8 +101,8 @@ const Kakao = () => {
             // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
             map.setBounds(bounds);
           }
-        });
-      }, [map,category, area]);
+        })
+      }, [map,category]);
 
 	return (
         <>
@@ -139,7 +141,8 @@ const Kakao = () => {
               }}
               level={3}
               onDragEnd={(map) => {
-                  getAddr(map.getCenter());
+                  // getAddr(map.getCenter());
+                  setCoord(map.getCenter());
               }}
               onCreate={setMap}
               >
@@ -188,7 +191,7 @@ const Kakao = () => {
         <Footer info={ info }/>
           
           
-          </>
+        </>
 	);
 }    
 
