@@ -10,7 +10,14 @@ const PetmanDetail = () => {
  
     const sliders = [ '/upload/puppy1.jpg', 
                       '/upload/puppy2.jpg', 
-                      '/upload/puppy3.jpg' ];
+                      '/upload/puppy3.jpg',
+                      '/upload/puppy4.jpg', 
+                      '/upload/puppy5.jpg', 
+                      '/upload/puppy6.jpg',
+                      '/upload/puppy7.jpg', 
+                      '/upload/puppy8.jpg', 
+                      '/upload/puppy9.jpg',
+                      '/upload/puppy10.jpg' ];
 
 	return (
 		<>

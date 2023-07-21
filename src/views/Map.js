@@ -4,45 +4,69 @@ import '../css/User.css';
 import React, {useState, useEffect} from 'react';
 import { Map, MapMarker, CustomOverlayMap } from 'react-kakao-maps-sdk';
 
+const { kakao } = window;
 
 const Kakao = () => {
 
     const navigate = useNavigate();
-
-    const { kakao } = window;
+   
     const infowindow = new kakao.maps.InfoWindow({zIndex:1});
     const initInfo = {'content':'', 'address':'', 'phone':''};
-    const [info, setInfo] = useState(initInfo)
-    const [markers, setMarkers] = useState([])
-    const [map, setMap] = useState()
-    
-    const area = '계양구';
-    const selectList = ["동물병원", "애견미용실", "애견카페"];
-    const [selectValue, setSelectValue] = useState(selectList[0]);
-    const [isOpen, setIsOpen] = useState(false)
+    const [info, setInfo] = useState(initInfo);
+    const [markers, setMarkers] = useState([]);
+    const [map, setMap] = useState();
+    const [area, setArea] = useState('계양구');
 
+    const selectList = ["동물병원", "애견미용실", "애견카페", '애견분양'];
+    const [category, setCategory] = useState(selectList[0]);
+    const [isOpen, setIsOpen] = useState(false);
+
+    // const { currentCoordinate } = getCurrentCoordinate;
+    
     const handleSubmit = (e) => {
-      setSelectValue(e.target.value);
+      setCategory(e.target.value);
       setInfo(initInfo);
       e.preventDefault();
     };
 
     var pin = '/images/marker-blue.png';
-    if (selectValue==='동물병원') {
+    if (category==='동물병원') {
         pin = '/images/marker-red.png';
     }
-    if (selectValue==='애견미용실') {
+    if (category==='애견미용실') {
         pin = '/images/marker-pink.png';
     }
-    if (selectValue==='애견카페') {
+    if (category==='애견카페') {
         pin = '/images/marker-blue.png';
     }
-
+    if (category==='애견분양') {
+      pin = '/images/marker-blue.png';
+  }
    
-    useEffect(() => {
-        if (!map) return
+  const getAddr = (coords) => {
+    const geocoder = new kakao.maps.services.Geocoder(); 
+    let callback = function(result, status) {
+      if (status === kakao.maps.services.Status.OK) {
+          const arr  ={ ...result};
+          const _arr = arr[0].region_2depth_name;
+          console.log('****** ' + _arr);
+          setArea(_arr);
+      }
+  }
+    const result = geocoder.coord2RegionCode(coords.getLng(), coords.getLat(), callback); 
+  };
+
+
+    useEffect(() => {    
+        if (!map || !category || !area) return;
         const ps = new kakao.maps.services.Places();            
-        const keyword = area + ' ' + selectValue;
+        const keyword = area + ' ' + category;          
+        console.log('>>>>>>> ' + keyword);
+        // var options = {
+        //   location: currentCoordinate,
+        //   radius: 10000,
+        //   sort: kakao.maps.services.SortBy.DISTANCE,
+        // };
 
         ps.keywordSearch(keyword, (data, status, _pagination) => {
           if (status === kakao.maps.services.Status.OK) {
@@ -52,6 +76,11 @@ const Kakao = () => {
             let markers = [];
     
             for (var i = 0; i < data.length; i++) {
+              console.log('>>>>>>>>>>>>>>>>> ' + data[i].category_group_name
+                + ' ' + data[i].category_name
+                + ' ' + data[i].distance
+                + ' ' + data[i].road_address_name
+              );
               // @ts-ignore
               markers.push({
                 position: {
@@ -71,8 +100,8 @@ const Kakao = () => {
             map.setBounds(bounds);
           }
         });
-      }, [map, selectValue]);
-      
+      }, [map,category, area]);
+
 	return (
         <>
 
@@ -101,14 +130,17 @@ const Kakao = () => {
         <div class={styles.map}>
           <Map 
               center={{
-                  lat: 37.566826,
-                  lng: 126.9786567,
+                  lat: 37.5538245,
+                  lng: 126.7456244,
               }}
               style={{
                   width: "100%",
                   height: "100%",
               }}
               level={3}
+              onDragEnd={(map) => {
+                  getAddr(map.getCenter());
+              }}
               onCreate={setMap}
               >
               {markers.map((marker) => (
@@ -197,5 +229,28 @@ function Footer_Call(props) {
     </>
   )
 }
+
+
+const getCurrentCoordinate = async () => {
+  console.log("getCurrentCoordinate 함수 실행!!!");
+  return new Promise((res, rej) => {
+    // HTML5의 geolocaiton으로 사용할 수 있는지 확인합니다.
+    if (navigator.geolocation) {
+      // GeoLocation을 이용해서 접속 위치를 얻어옵니다.
+      navigator.geolocation.getCurrentPosition(function (position) {
+        console.log(position);
+        const lat = position.coords.latitude; // 위도
+        const lng = position.coords.longitude; // 경도
+
+        const coordinate = new kakao.maps.LatLng(lat, lng);
+        res(coordinate);
+      });
+    } else {
+      rej(new Error("현재 위치를 불러올 수 없습니다."));
+    }
+  });
+};
+
+
 
 export default Kakao;

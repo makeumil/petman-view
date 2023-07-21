@@ -11,7 +11,7 @@ const Main = () => {
 			<div class={styles.header}>
 				<div class={styles.header__wrapper}>
 					<div class={styles.header__start}>         
-						<Link to='/test'>
+						<Link to='/'>
 							<img class={styles.header__icon} src='/images/search2.png' alt=''></img>  
 						</Link>	
 						<span class={styles.header__area}>박촌동</span>						

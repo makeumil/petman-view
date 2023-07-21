@@ -10,6 +10,7 @@ function Slide(props) {
 
   const { contents } = props;    
 
+  const [initSlide, setInitSlide] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [state,  setState] = useState({
     activeIndex: 0,
@@ -17,8 +18,8 @@ function Slide(props) {
   });
 
   const openModalHandler = () => {
-    setIsOpen(!isOpen)    
-    // this.slider.slickGoTo(state.updateCount);
+    setInitSlide(state.changedIndex);
+    setIsOpen(!isOpen)   
   };
 
   const settings = {
@@ -30,7 +31,7 @@ function Slide(props) {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: '0px',
-    initialSlide: state.changedIndex,
+    initialSlide: initSlide,
     beforeChange: (current, next) => setState({ activeIndex: next  }),
     afterChange: current => setState({ changedIndex: current }),
     nextArrow: (
