@@ -88,7 +88,7 @@
     width: 100%;
     margin: 140px 0px 150px 0px;   
 }
-.form__wrap input[type=text] {
+@mixin input__default{
     color: whitesmoke;
     font-size: 2rem;
     width: 90%;
@@ -99,7 +99,15 @@
     border-radius: 10px;
     margin: 30px 0px 10px 0px;
 }
-.form__wrap textarea{
+.input__ok {
+    @include input__default;
+    border: solid 2px #1E90FF;
+}
+.input__nok {
+    @include input__default;
+    border: solid 2px gray;
+}
+@mixin textarea__default{
     color: whitesmoke;
     font-size: 2rem;
     width: 90%;
@@ -107,14 +115,19 @@
     padding: 5px;
     background-color: rgb(73, 73, 73);
     resize: both;
-    box-sizing: border-box;
-    border: solid 2px #1E90FF;
+    box-sizing: border-box;    
     border-radius: 10px;
     margin: 30px 0px 10px 0px;
 }
-
+.textarea__ok{
+    @include textarea__default;
+    border: solid 2px #1E90FF;
+}
+.textarea__nok{
+    @include textarea__default;
+    border: solid 2px gray;
+}
 .form__wrap input::placeholder{
-	color: rgb(118, 118, 118);
 	font-size: 3rem;
     text-align: left;
 }
