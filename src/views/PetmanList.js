@@ -42,7 +42,7 @@ const PetmanList = () => {
 							
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Amet eiusmod nulla eiusmod Lorem non ullamco consequat ... </h1>
+								<h1 class={styles.thumbs__text__content}>Amet eiusmod nulla eiusmod Lorem non ullamco consequat ... </h1><br/>
 								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 
@@ -58,7 +58,7 @@ const PetmanList = () => {
 						</div>		
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1><br/>
 								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 						</div>		
@@ -72,7 +72,7 @@ const PetmanList = () => {
 						</div>	
 						<div class={styles.thumbs__info}>        
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1><br/>
 								<p class={styles.thumbs__text__date}>2시간전</p>
 							</div>	
 						</div>	

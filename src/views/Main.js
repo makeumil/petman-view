@@ -49,7 +49,7 @@ const Main = () => {
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Amet eiusmod nulla eiusmod Lorem non ullamco consequat ... </h1>
+								<h1 class={styles.thumbs__text__content}>Amet eiusmod nulla eiusmod Lorem non ullamco consequat ... </h1><br/>
 								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 
@@ -80,7 +80,7 @@ const Main = () => {
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1><br/>
 								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
@@ -109,7 +109,7 @@ const Main = () => {
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1><br/>
 								<p class={styles.thumbs__text__date}>2시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
@@ -138,7 +138,7 @@ const Main = () => {
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1><br/>
 								<p class={styles.thumbs__text__date}>30분전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
@@ -167,7 +167,7 @@ const Main = () => {
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1><br/>
 								<p class={styles.thumbs__text__date}>1일전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
@@ -196,7 +196,7 @@ const Main = () => {
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1><br/>
 								<p class={styles.thumbs__text__date}>15분전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
@@ -225,7 +225,7 @@ const Main = () => {
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1><br/>
 								<p class={styles.thumbs__text__date}>23시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
@@ -254,7 +254,7 @@ const Main = () => {
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1><br/>
 								<p class={styles.thumbs__text__date}>45분전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
@@ -283,7 +283,7 @@ const Main = () => {
 								</div>	
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1><br/>
 								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
@@ -312,7 +312,7 @@ const Main = () => {
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1><br/>
 								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
@@ -341,7 +341,7 @@ const Main = () => {
 								</div>	
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1><br/>
 								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  
@@ -370,7 +370,7 @@ const Main = () => {
 								</div>
 							</div>	
 							<div class={styles.thumbs__text}> 
-								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1>
+								<h1 class={styles.thumbs__text__content}>Deserunt deserunt nisi magna ex excepteur.</h1><br/>
 								<p class={styles.thumbs__text__date}>1시간전</p>
 							</div>	
 							<div class={styles.thumbs__frends}>  

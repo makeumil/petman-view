@@ -1,3 +1,4 @@
+
 .header{
     position: fixed;
     top: 0;
@@ -44,6 +45,7 @@
     background-color: transparent;
     margin-right: 100px;
 }
+
 .picture{
     display: flex;
     align-items: center;
@@ -54,7 +56,7 @@
     border: 10px solid gray;
     border-radius: 5%;
     background-color: transparent;
-    margin: 170px 0px 0px 30px;
+    margin: 170px 0px 0px 80px;
 }
 .picture img{
     width: 150px;
@@ -63,107 +65,71 @@
     width: 400px;
     height: 30px;
     text-align: center;
-    margin: 30px 0px 0px 30px;
+    margin: 30px 0px 0px 80px;
 }
 .picture__text span{
     font-size: 2rem;
     color: lightgray;
 }
-input[type=text]{
-    color: whitesmoke;
-    font-size: 2rem;
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    background-color: rgb(73, 73, 73);
-    box-sizing: border-box;
-    margin: 10px;
-    border: solid 2px #1E90FF;
+
+.formbox{
+    display: flex;
+    min-width: 100%;
+    
+    /* border: 1px solid red; */
+    margin: 0px;
+    padding: 5px ;
 }
-textarea{
+.form__wrap{
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 140px 0px 150px 0px;   
+}
+.form__wrap input[type=text] {
     color: whitesmoke;
     font-size: 2rem;
-    width: 100%;
-    height: 300px;
-    padding: 10px;
+    width: 90%;
+    height: 100px;
+    padding: 5px;
     background-color: rgb(73, 73, 73);
-    margin: 10px;
+    border: solid 2px #1E90FF;
+    border-radius: 10px;
+    margin: 30px 0px 10px 0px;
+}
+.form__wrap textarea{
+    color: whitesmoke;
+    font-size: 2rem;
+    width: 90%;
+    height: 300px;
+    padding: 5px;
+    background-color: rgb(73, 73, 73);
     resize: both;
     box-sizing: border-box;
     border: solid 2px #1E90FF;
+    border-radius: 10px;
+    margin: 30px 10px 0px 10px;
 }
-label {
-    display: flex;
-    font-size: 2rem;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 2rem;
-    padding: 0rem 2rem;
-}
-[type="radio"] {
-    appearance: none;
-    border: max(2px, 0.1em) solid #1E90FF;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    vertical-align: middle;
-    padding: 20px;
-    margin-left: 60px;
-}
-[type="radio"]:checked {
-    border: 0.6em solid tomato;
-}
-[type="radio"]:hover {
-    box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
-    cursor: pointer;
-}
-input::placeholder{
+
+.form__wrap input::placeholder{
 	color: rgb(118, 118, 118);
 	font-size: 3rem;
-    text-align: center;
+    text-align: left;
 }
-.main__contents{
-    width: 100%;
-    margin: 140px 0px 120px 0px;
-    background-color: transparent;
+.form__wrap textarea::placeholder{
+    font-size: 3rem;
+    text-align: left;
 }
-.main__content__wrap{
-    width: 100%;
-    padding-bottom: 30px;
-}
-.main__content{
-    padding: 30px 30px 20px 30px;
-    word-break: break-all;
-}
-.main__content table{
-    width: 100%;
-    font-size: 2rem;
-    color: white;
-    vertical-align: middle;
-}
-.main__content tr{
-    height: 150px;    
-}
-.main__content td{
-    border-bottom: 1px dotted gray;
-    vertical-align: middle;
-    padding-right: 20px;
-}
-.main__content__date{
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    padding: 30px;
-    color: gray;
-}
+
 .icon__group{
     position: absolute;
     width: 100%;
     height: 100px;
     text-align: right;
     vertical-align: middle;
-    padding: 10px 30px 10px 10px;
+    padding: 10px 0px 10px 0px;
 }
 .icon__image{
     width: 60px;
@@ -174,16 +140,64 @@ input::placeholder{
     position: fixed; 
     align-items: center;
     justify-content: center;
-    border: 3px solid wheat;
     width: 100%;
     height: 120px;
-    padding: 10px;
+    padding: 5px;
     left: 0px;
     bottom: 0px;
     color: white;
     font-size: 3rem;
     background-color: rgb(255, 51, 0);
     z-index: 999;
+}
+
+
+label {
+    line-height: 2rem;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+  
+.form__wrap input[type="radio"], span {
+    vertical-align: middle;
+}
+  
+.form__wrap input[type="radio"] {
+    appearance: none;
+    border: max(2px, 0.1em) solid gray;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+}
+  
+.form__wrap input[type="radio"]:checked {
+    border: 0.4em solid tomato;
+}
+  
+.form__wrap input[type="radio"]:focus-visible {
+    outline-offset: max(2px, 0.1em);
+    outline: max(2px, 0.1em) dotted tomato;
+}
+  
+.form__wrap input[type="radio"]:hover {
+    box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+    cursor: pointer;
+}
+  
+.form__wrap input[type="radio"]:hover + span {
+    cursor: pointer;
+}
+
+fieldset {
+    display: flex;
+    justify-content: center;
+    border: none;
+    margin: 0;
+    padding: 10px 10px;    
+    margin-left: 10px;
+} 
+span{
+    font-size: 3rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -197,7 +211,7 @@ input::placeholder{
         border: 1px solid gray;
         border-radius: 5%;
         background-color: transparent;
-        margin: 90px 0px 0px 10px;
+        margin: 90px 0px 0px 20px;
     }
     .picture img{
         width: 80px;
@@ -206,12 +220,12 @@ input::placeholder{
         width: 120px;
         height: 30px;
         text-align: center;
-        margin: 10px 0px 0px 10px;
+        margin: 10px 0px 0px 20px;
     }
     .picture__text span{
         font-size: 1rem;
         color: lightgray;
-    }
+    } 
     .header__wrapper{
         height: 60px;
         padding: 0 4px;
@@ -236,57 +250,32 @@ input::placeholder{
         width: 30px;
         height: 30px;
     }   
-    input[type=text], input[type=textarea], label, textarea{
-        font-size: 1rem;
+    .form__wrap input[type=text],  label, .form__wrap textarea, .form__wrap [type=text]::placeholder, .form__wrap textarea::placeholder{
+        font-size: 1.5rem;
+        text-align: left;
     }
-    .main__contents{
-        margin: 30px 0px 60px 0px;
+    .form__wrap input[type=text], textarea {
+        height: 40px;
     }
-    .main__content{
-        padding: 5px;
-    }
-    .main__content table{
-        font-size: 1rem;
-    }
-    .main__content tr{
-        height: 30px;    
-    }
-    .main__content td{
-        padding-right: 5px;
-    }
-    .main__content td{
-        border-bottom: 1px dotted gray;
-        vertical-align: middle;
-        padding-right: 10px;
+    .form__wrap {
+        margin: 30px 0px 60px 00px;
     }
     .form__submit{       
         height: 60px;    
         font-size: 1.5rem;    
+        cursor: pointer;
+    } 
+    fieldset {
+        padding: 5px 5px;
+        margin-left: 10px;
     }
-    input[type=text]{
-        font-size: 1rem;      
-        height: 30px;
-        padding: 5px;       
-        margin: 10px;      
-        border: solid 1px #1E90FF;
+    span{
+        font-size: 1.5rem;
     }
-    textarea{
-        font-size: 1rem;       
-        height: 60px;
-        padding: 5px;       
-        margin: 10px;       
-        border: solid 1px #1E90FF;
+    label {
+        line-height: 1.5rem;
+        padding: 1rem 2rem;
+        align-items: center;
     }
-    input::placeholder{
-        font-size: 1rem;
-    }      
-    [type="radio"] {
-        appearance: none;
-        border: max(2px, 0.1em) solid #1E90FF;
-        border-radius: 50%;
-        width: 2rem;
-        height: 2rem;
-        vertical-align: middle;
-        padding: 10px;
-    }
+    
 }    

@@ -15,13 +15,14 @@ import AdoptUpdate from './views/AdoptUpdate';
 import PetmanList from './views/PetmanList';
 import PetmanReg from './views/PetmanReg';
 import Kakao from './views/Map';
-
 import Test from './views/Test';
+import ScrollTop from './views/ScrollToTop';
 
 const App = () => {
 	return (
 		<div class={ResetStyle}>
 			<BrowserRouter>
+			    <ScrollTop />
 				<Routes>
 					<Route path="/" element={<Main />}></Route>					
 					<Route path="/content" element={<PetmanDetail />}></Route>
@@ -37,6 +38,7 @@ const App = () => {
 					{/* <Route path="/product/*" element={<Product />}></Route> */}
 					{/* 상단에 위치하는 라우트들의 규칙을 모두 확인, 일치하는 라우트가 없는경우 처리 */}
 					<Route path="*" element={<NotFound />}></Route>
+					
 				</Routes>
 			</BrowserRouter>
 		</div>
